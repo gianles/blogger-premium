@@ -652,6 +652,14 @@ body{
 .right{
   float: right;
 }
+.no-entrys .info {
+    background-color: rgba(255,255,255,0.05);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+	margin:1rem 0;
+	text-align:center;
+	color:rgba(255,255,255,0.4);
+}
 /*header*/
 header .container{
 padding: 0.5rem 1rem 1.2rem 1rem;
@@ -1256,12 +1264,18 @@ width:95%;
 </div>
 
       <b:if cond='data:view.isMultipleItems'>
+	      		<b:if cond='data:numPosts == 0'>
+			<div class='no-entrys'>
+			<p class='info'><b:if cond='data:blog.searchQuery'>No hay entradas con esos términos de búsqueda<br/><span class='mott'>( &#172;_&#172;)</span><b:else/>Este blog aún no tiene entradas<br/><span class='mott'>อ_อ</span></b:if></p>
+			</div>
+		<b:else/>
 <div class='items clearfix flex align-items-center wrap align-items-start'>
          <b:loop values='data:posts' var='post'>
             <b:include data='post' name='post'/><!-- insertamos entradas -->
          </b:loop>
 </div>
          <b:include name='nextprev'/>
+				</b:if>
       <b:else/>
          <b:loop values='data:posts' var='post'>
             <b:include data='post' name='post'/><!-- insertamos entradas -->
@@ -1537,7 +1551,7 @@ var a=document.getElementsByClassName("avatar-image-container");for(i=0;i<a.leng
 
 					(typeof ga == "function") && ga('send', 'event', 'Like', 'facebook', 'Like Confirm');
 					
-					var likeUrl = 'https://www.facebook.com/plugins/error/confirm/like?iframe_referer=http%3A%2F%2Fgoogle.com%2F&kid_directed_site=false&secure=true&plugin=like&return_params=%7B%22href%22%3A%22https%3A%2F%2Ffacebook.com%2FURL FB PAGE%22%2C%22width%22%3A%22200%22%2C%22layout%22%3A%22button_count%22%2C%22action%22%3A%22like%22%2C%22size%22%3A%22large%22%2C%22show_faces%22%3A%22false%22%2C%22share%22%3A%22true%22%2C%22height%22%3A%2228%22%2C%22appId%22%3A%22193149331091089%22%2C%22ret%22%3A%22sentry%22%2C%22act%22%3A%22connect%22%7D';
+					var likeUrl = 'https://www.facebook.com/plugins/error/confirm/like?iframe_referer=http%3A%2F%2Fgoogle.com%2F&kid_directed_site=false&secure=true&plugin=like&return_params=%7B%22href%22%3A%22https%3A%2F%2Ffacebook.com%2F237489122940550%22%2C%22width%22%3A%22200%22%2C%22layout%22%3A%22button_count%22%2C%22action%22%3A%22like%22%2C%22size%22%3A%22large%22%2C%22show_faces%22%3A%22false%22%2C%22share%22%3A%22true%22%2C%22height%22%3A%2228%22%2C%22appId%22%3A%22193149331091089%22%2C%22ret%22%3A%22sentry%22%2C%22act%22%3A%22connect%22%7D';
 					window.open(likeUrl, "popup", "toolbar=0,status=0,width=600,height=400,top=" + sTop + ",left=" + sLeft);
 				}
 				
