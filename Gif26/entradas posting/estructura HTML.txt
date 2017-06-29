@@ -1,0 +1,19 @@
+<!--las etiquetas "br" se usan para hacer espacios entre el contenido-->
+<!--las etiquetas "h3" se usan para los subtitulos o titulos de los parrafos-->
+<!--las etiquetas "p" se usan para los parrafos (textos)-->
+<!--las etiquetas "blockquote" se usan para las citas o texto a resaltar de los parrafo (No es obligatorio, se pueden borrar)-->
+
+<div class='gif-like'>
+<div class="separator" style="text-align: center;">
+<img  src="ENLACE DEL GIF" ></div>
+</div>
+<br>
+
+<h3>Titulo del parrafo</h3>
+<br>
+
+<p>Parrafo</p>
+<br>
+
+<blockquote>Citas de la entradas</blockquote>
+<br>
