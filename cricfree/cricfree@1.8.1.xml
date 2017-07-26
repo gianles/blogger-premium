@@ -397,49 +397,48 @@ padding:0;
   margin:auto;
 }
 /*Deportes Iconos y Online and Offline*/
-.sport-icon{vertical-align:middle;display:inline-block;width:20px;height:20px;margin:0 3px 0 0;background:transparent url('http://cricfree.sc/images/menu2.png') -1px -1px no-repeat}
+.sport-icon{vertical-align:middle;display:inline-block;width:20px;height:20px;margin:0 3px 0 0;background:transparent url('https://3.bp.blogspot.com/-QIpWwSKcuYE/WXkc7FiAoeI/AAAAAAAAA9w/B8OlFIVZnLYM5OnpPSEAGw-6F0wWRLVEwCLcBGAs/s1600/iconos-deportes-bygian.png') -1px -1px no-repeat}
 .other-icon{vertical-align:middle;display:inline-block;width:29px;height:20px;margin:0 3px 0 0;background:transparent url('http://cricfree.sc/images/menu2.png') -1px -1px no-repeat}
-
-.live-icon{vertical-align:middle;display:inline-block;width:17px;height:17px;margin:0 3px 0 0;
-  background:transparent url('http://cricfree.sc/images/liveG.gif') -1px -1px no-repeat}
+.live-icon{vertical-align:middle;display:inline-block;width:17px;height:17px;margin:0 3px 0 0;background:transparent url('http://cricfree.sc/images/liveG.gif') -1px -1px no-repeat}
 
 .nolive-icon{vertical-align:middle;display:inline-block;width:14px;height:14px;margin:0 3px 0 0;background:transparent url('http://cricfree.sc/images/notlive.png') -1px -1px no-repeat}
 
 .moreicons{vertical-align:middle;display:inline-block;margin:0 3px 0 0;background:transparent url('/images/logosimg.png') -1px -1px no-repeat}
-.sport-icon.futbol{background-position:-1px -484px}
-.sport-icon.hockey{background-position:-1px -400px}
-.sport-icon.tenis{background-position:-1px -505px}
-.sport-icon.basquetbol{background-position:-1px -169px}
-.sport-icon.balonmano{background-position:-1px -379px}
-.sport-icon.voleibol{background-position:-1px -547px}
-.sport-icon.beisbol {background-position:-1px -148px}
-.sport-icon.futbol-americano{background-position:-1px -43px}
-.sport-icon.rugby{background-position:-1px -463px}
-.sport-icon.minority{background-position:-1px -22px}
-.sport-icon.futbol-australiano{background-position:-1px -64px}
-.sport-icon.badminton{background-position:-1px -85px}
-.sport-icon.bandy{background-position:-1px -127px}
-.sport-icon.voleibol-playa{background-position:-1px -211px}
-.sport-icon.boxeo{background-position:-1px -232px}.sport-icon.floorball{background-position:-1px -316px}.sport-icon.futsala{background-position:-1px -337px}.sport-icon.criquet{background-position:-1px -253px}
-.sport-icon.mma{background-position:-1px -526px}
-.sport-icon.futbol-playa{background-position:-1px -190px}
-.sport-icon.field-hockey{background-position:-1px -295px}
-.sport-icon.rugby-league{background-position:-1px -442px}
-.sport-icon.snooker{background-position:-1px -106px}
-.sport-icon.table-tennis{background-position:-1px -421px}
-.sport-icon.dardo{background-position:-1px -274px}
-.sport-icon.water-polo{background-position:-1px -568px}
-.sport-icon.netball{background-position:-1px -589px}
-.sport-icon.golf{background-position:-1px -610px}
-.sport-icon.pesapallo{background-position:-1px -631px}
-.sport-icon.motorsport{background-position:-1px -652px}
-.sport-icon.motorsport-auto-racing{background-position:-1px -673px}
-.sport-icon.motorsport-moto-racing{background-position:-1px -694px}
-.sport-icon.cycle{background-position:-1px -715px}
-.sport-icon.ufc{background-position:-1px -736px}
-.sport-icon.moto{background-position:-1px -757px}
-.sport-icon.afl{background-position:-1px -778px}
-.sport-icon.more{background-position:-22px -1px}
+
+.sport-icon.futbol,.sport-icon.Futbol{background-position:-1px -1px}
+
+.sport-icon.basquetbol,.sport-icon.Basquetbol{background-position:-1px -23px}
+
+.sport-icon.beisbol,.sport-icon.Beisbol{background-position:-1px -44px}
+
+.sport-icon.tenis,.sport-icon.Tenis{background-position:-1px -65px}
+
+.sport-icon.futbolamericano,.sport-icon.FutbolAmericano{background-position:-1px -85px}
+
+.sport-icon.golf,.sport-icon.Golf{background-position:-1px -107px}
+
+.sport-icon.volibol,.sport-icon.Volibol{background-position:-1px -127px}
+
+.sport-icon.hockey,.sport-icon.Hockey{background-position:-1px -147px}
+
+.sport-icon.moto,.sport-icon.Moto{background-position:-1px -169px}
+
+.sport-icon.olimpiada,.sport-icon.Olimpiada{background-position:-1px -187px}
+
+.sport-icon.skate,.sport-icon.Skate{background-position:-1px -212px}
+
+.sport-icon.premio,.sport-icon.Premio{background-position:-1px -232px}
+
+.sport-icon.boxeo,.sport-icon.Boxeo{background-position:-1px -254px}
+
+.sport-icon.bolos,.sport-icon.Bolos{background-position:-1px -275px}
+
+.sport-icon.wwe,.sport-icon.WWE,.sport-icon.Wwe{background-position:-1px -295px}
+
+.sport-icon.ufc,.sport-icon.UFC,.sport-icon.Ufc{background-position:-1px -317px}
+
+.sport-icon.nba,.sport-icon.NBA,.sport-icon.Nba{background-position:-1px -338px}
+
 /*Pais Iconos*/
 
 /*!
@@ -1545,6 +1544,8 @@ margin-top:1rem;
  table tbody tr a,table tbody tr a:hover{color:#777777;font-weight:700;}
  table tbody tr {background: #fbf7ef;color:#777777;font-size:.65rem;font-family: Verdana;}
  table tbody tr:nth-child(2n+1) {background: rgba(255, 255, 255, 1);}
+
+ table tbody tr:hover{background:#e9e9e9}
  table thead {background: #ededed;}
  table thead th {
    background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.05, rgb(92, 92, 92)), to(rgb(109, 106, 106))) rgb(92, 92, 92);
@@ -1806,6 +1807,9 @@ height:350px;
   border-top: 1px solid rgb(221, 221, 221);
   margin:auto;
 }
+.canales{
+  margin-bottom:.8rem;
+}
 .canales a img{
   width:100px;
 }
@@ -1914,13 +1918,12 @@ margin-left:0;
 
 &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-nr9L1TU6wQQ/WW_Ps20s82I/AAAAAAAAA6w/pIdCHnzB3nULN3HEOaqBIe4P4-oMTbJDwCLcBGAs/s200/espnhd.jpg&quot;/&gt;&lt;/a&gt;
 
-&lt;a href=&quot;http://miblog.blogspot.com&quot;&gt;&lt;img src=&quot;IMAGEN LOGO DEL CANAL&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;http://www.sportzonetv.net/2015/12/nbatv.html&quot;&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-HeOYtOq9_Qk/WXkEwtp6p1I/AAAAAAAAA9E/SuXiciXGmrYppAH0K9Ar89ApA9NfbUvuACLcBGAs/s1600/nba-tv-bygian.png&quot;/&gt;&lt;/a&gt;
 
-&lt;a href=&quot;ENLACE DEL CANAL&quot;&gt;&lt;img src=&quot;IMAGEN LOGO DEL CANAL&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;ENLACE DEL CANAL&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-VVzCDhYYrBY/WXkJyR-a0wI/AAAAAAAAA9U/tNLO9R8MCe4Kp41BJs7LsV_4ncTw2XtkgCLcBGAs/s1600/boxnation-bygian.png&quot;/&gt;&lt;/a&gt;
 
-&lt;a href=&quot;ENLACE DEL CANAL&quot;&gt;&lt;img src=&quot;IMAGEN LOGO DEL CANAL&quot;/&gt;&lt;/a&gt;
 
-&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;IMAGEN LOGO DEL CANAL&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;ENLACE DEL CANAL&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-WzktXyEjrRw/WXkNsYSNfNI/AAAAAAAAA9g/nI2p6VrSWFQ3q9mjTAkzlR15H9C-hUDGwCLcBGAs/s1600/wwetv-bygian.png&quot;/&gt;&lt;/a&gt;
 
 &lt;/div&gt;</b:widget-setting>
       </b:widget-settings>
@@ -2013,12 +2016,12 @@ margin-left:0;
             <tr>
               <th style='min-width:8px'>#</th>
               <th style='min-width:52px'>Fecha</th>
-              <th class="fuera2">Hora</th>
-              <th class="fuera" style='min-width:10px'>F</th>
-              <th class="fuera" style='min-width:15px'>Com</th>
+              <th class='fuera2'>Hora</th>
+              <th class='fuera' style='min-width:10px'>F</th>
+              <th class='fuera' style='min-width:15px'>Com</th>
               <th>Titulo</th>
               <th style='min-width:18px'>Live</th>
-              <th class="fuera" style='min-width:16px'>Std</th>
+              <th class='fuera' style='min-width:16px'>Std</th>
             </tr>
         </thead>
         <tbody>
@@ -2122,7 +2125,23 @@ Ver en vivo <data:post.title/>, Ver <data:post.title/> Online, Ver <data:post.ti
                 <tr>
 				  <td><b:if cond='data:post.labels'>
       <b:loop values='data:post.labels' var='label'>
-        <b:if cond='data:label.name in [&quot;futbol&quot;,&quot;hockey&quot;,&quot;tenis&quot;,&quot;basquetbol&quot;,&quot;balonmano&quot;,&quot;voleibol&quot;,&quot;beisbol&quot;,&quot;rugby&quot;,&quot;boxeo&quot;,&quot;mma&quot;,&quot;moto&quot;,&quot;futbol-americano&quot;,&quot;voleibol-playa&quot;,&quot;futbol-playa&quot;,&quot;criquet&quot;,&quot;futsala&quot;,&quot;luchalibre&quot;,&quot;ufc&quot;]'>
+        <b:if cond='data:label.name in [&quot;futbol&quot;,&quot;hockey&quot;,&quot;tenis&quot;,&quot;basquetbol&quot;,&quot;voleibol&quot;,&quot;beisbol&quot;,&quot;boxeo&quot;,&quot;moto&quot;,&quot;futbolamericano&quot;,&quot;volibol&quot;,&quot;ufc&quot;,&quot;golf&quot;,&quot;olimpiada&quot;,&quot;skate&quot;,&quot;premio&quot;,&quot;wwe&quot;,&quot;bolos&quot;,&quot;nba&quot;]'>
+          <span expr:class='&quot;sport-icon &quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop></b:if>
+
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;Futbol&quot;,&quot;Hockey&quot;,&quot;Tenis&quot;,&quot;Basquetbol&quot;,&quot;Voleibol&quot;,&quot;Beisbol&quot;,&quot;Boxeo&quot;,&quot;Moto&quot;,&quot;FutbolAmericano&quot;,&quot;Volibol&quot;,&quot;Ufc&quot;,&quot;Golf&quot;,&quot;Olimpiada&quot;,&quot;Skate&quot;,&quot;Premio&quot;,&quot;Wwe&quot;,&quot;Bolos&quot;,&quot;Nba&quot;]'>
+          <span expr:class='&quot;sport-icon &quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop></b:if>
+
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;UFC&quot;,&quot;WWE&quot;,&quot;NBA&quot;]'>
           <span expr:class='&quot;sport-icon &quot; + data:label.name' expr:title='data:label.name'/>
           <b:if cond='data:label.isLast != &quot;true&quot;'/>
         </b:if>
@@ -2135,8 +2154,8 @@ Ver en vivo <data:post.title/>, Ver <data:post.title/> Online, Ver <data:post.ti
         </b:if>
       </b:loop>
                       </b:if></td>
-                  <td class="fuera2"><b><data:post.timestamp/></b></td>
-                  <td class="fuera">
+                  <td class='fuera2'><b><data:post.timestamp/></b></td>
+                  <td class='fuera'>
 <!--Europa (Sur, Norte y Central)-->
 <b:if cond='data:post.labels'>
       <b:loop values='data:post.labels' var='label'>
@@ -2199,10 +2218,10 @@ Ver en vivo <data:post.title/>, Ver <data:post.title/> Online, Ver <data:post.ti
         </b:if>
       </b:loop>
                       </b:if></td>
-                  <td class="fuera" style='width:15px;font-size:.61rem;line-height:12px;'><data:post.snippet/></td>
+                  <td class='fuera' style='width:15px;font-size:.61rem;line-height:12px;'><data:post.snippet/></td>
                   <td><a class='titulo' expr:href='data:post.url'><data:post.title/></a></td>
                   <td><a class='ver' expr:href='data:post.url'>ver</a></td>
-                  <td class="fuera">
+                  <td class='fuera'>
 <b:if cond='data:post.labels'>
       <b:loop values='data:post.labels' var='label'>
         <b:if cond='data:label.name in [&quot;live&quot;,&quot;nolive&quot;]'>
