@@ -232,6 +232,7 @@ header{
 /*logo*/
 .logo{
   padding: .6rem 0 .7rem 0;
+  margin-left:1rem;
 }
 .logo span a{
   font-family: 'PT Sans Narrow', sans-serif;
@@ -1809,17 +1810,34 @@ height:350px;
   width:100px;
 }
 }
+@media only screen and (max-width: 550px) {
+.fuera{
+  display:none;
+}
+.logo{
+width:100%;
+text-align:center;
+margin-left:0;
+}
+
+.canales a{
+  padding: .3rem;
+  border-top: 0px solid rgb(221, 221, 221);
+  margin:auto;
+}
+.canales img{
+  width:110px;
+}
+}
+@media only screen and (max-width: 390px) {
+.fuera2{
+  display:none;
+}
+}
 /*]]>*/</style>
 
 <b:skin><![CDATA[
-/*!
-=> Theme Name: Cricfree CLON
-=> Theme URI: http://www.bygian.com/
-=> Author: ByGian.Com
-=> Author URI: https://www.facebook.com/gianfranco.imperialevivas
-=> License: Creative Commons Atribucion-NoComercial 4.0 Internacional=> 
-License URI: http://creativecommons.org/licenses/by-nc/4.0/*//*Deleted: unnecessary elements*/
-.singleton-element:not(.cookie-choices-info),.item-control.blog-admin,.widget-item-control {display: none;}/*Fix: Blogger lightbox*/.CSS_LIGHTBOX {z-index: 90001 !important;}/*Design: admin blog*/body#layout .left {float: left;width: 50%;}body#layout .right {float: right;width: 50%;}]]></b:skin>
+/*!=> Theme Name: Cricfree CLON=> Theme URI: http://www.bygian.com/=> Author: ByGian.Com=> Author URI: https://www.facebook.com/gianfranco.imperialevivas=> License: Creative Commons Atribucion-NoComercial 4.0 Internacional=> License URI: http://creativecommons.org/licenses/by-nc/4.0/*//*Deleted: unnecessary elements*/.singleton-element:not(.cookie-choices-info),.item-control.blog-admin,.widget-item-control {display: none;}/*Fix: Blogger lightbox*/.CSS_LIGHTBOX {z-index: 90001 !important;}/*Design: admin blog*/body#layout .left {float: left;width: 50%;}body#layout .right {float: right;width: 50%;}]]></b:skin>
 
 &lt;!--</head>--&gt;&lt;/head&gt;
 
@@ -1995,12 +2013,12 @@ License URI: http://creativecommons.org/licenses/by-nc/4.0/*//*Deleted: unnecess
             <tr>
               <th style='min-width:8px'>#</th>
               <th style='min-width:52px'>Fecha</th>
-              <th>Hora</th>
-              <th style='min-width:10px'>F</th>
-              <th style='min-width:15px'>Com</th>
+              <th class="fuera2">Hora</th>
+              <th class="fuera" style='min-width:10px'>F</th>
+              <th class="fuera" style='min-width:15px'>Com</th>
               <th>Titulo</th>
               <th style='min-width:18px'>Live</th>
-              <th style='min-width:16px'>Std</th>
+              <th class="fuera" style='min-width:16px'>Std</th>
             </tr>
         </thead>
         <tbody>
@@ -2117,8 +2135,8 @@ Ver en vivo <data:post.title/>, Ver <data:post.title/> Online, Ver <data:post.ti
         </b:if>
       </b:loop>
                       </b:if></td>
-                  <td><b><data:post.timestamp/></b></td>
-                  <td>
+                  <td class="fuera2"><b><data:post.timestamp/></b></td>
+                  <td class="fuera">
 <!--Europa (Sur, Norte y Central)-->
 <b:if cond='data:post.labels'>
       <b:loop values='data:post.labels' var='label'>
@@ -2181,10 +2199,10 @@ Ver en vivo <data:post.title/>, Ver <data:post.title/> Online, Ver <data:post.ti
         </b:if>
       </b:loop>
                       </b:if></td>
-                  <td style='width:15px;font-size:.61rem;line-height:12px;'><data:post.snippet/></td>
+                  <td class="fuera" style='width:15px;font-size:.61rem;line-height:12px;'><data:post.snippet/></td>
                   <td><a class='titulo' expr:href='data:post.url'><data:post.title/></a></td>
                   <td><a class='ver' expr:href='data:post.url'>ver</a></td>
-                  <td>
+                  <td class="fuera">
 <b:if cond='data:post.labels'>
       <b:loop values='data:post.labels' var='label'>
         <b:if cond='data:label.name in [&quot;live&quot;,&quot;nolive&quot;]'>
