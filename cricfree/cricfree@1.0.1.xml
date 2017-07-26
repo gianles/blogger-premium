@@ -1,0 +1,2303 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='1' b:layoutsVersion='2' b:responsive='true' b:version='2' lang='es' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<!-- Canvas.xml v1.1.40 -->
+<head>
+
+<!-- Datos generales -->
+<meta content='es' name='DC.Language'/>
+<meta expr:charset='data:blog.encoding'/>
+<meta content='blogger' name='generator'/>
+<meta content='summary_large_image' name='twitter:card'/>
+<b:tag cond='data:view.isHomepage' content='blog' name='meta' property='og:type'/>
+<b:tag cond='data:view.isPost' content='article' name='meta' property='og:type'/>
+
+<!-- Responsive -->
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+
+<!--/// Cambia estos valores por los tuyos
+========================================================================== ///-->
+
+<link href='https://plus.google.com/IDpaginaGoogle' rel='Publisher'/>
+<meta content='@blogger' name='twitter:site'/>
+<meta content='@google' name='twitter:creator'/>
+<meta content='TuNombre' name='DC.Creator'/>
+
+<!-- Enlace Canonico -->
+<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+<meta expr:content='data:blog.canonicalUrl' name='twitter:url'/>
+<!-- Link rel=canonical -->
+<link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+
+<!-- Descripcion -->
+<b:if cond='data:blog.metaDescription'>
+   <meta expr:content='data:blog.metaDescription' property='og:description'/>
+   <meta expr:content='data:blog.metaDescription' name='description'/>
+   <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+   <meta expr:content='data:blog.metaDescription' name='DC.description'/>
+<b:elseif cond='data:view.isSingleItem'/>
+   <meta expr:content='data:blog.pageName + &quot; : Entra para leer el articulo completo.&quot;' name='twitter:description'/>
+</b:if>
+
+<!-- Robots solo en Post y MultipleItems -->
+<b:if cond='data:view.isArchive'>
+   <meta content='noindex,nofollow' name='robots'/>
+<b:else/>
+   <b:if cond='data:view.isError'>
+      <meta content='noindex,nofollow' name='robots'/>
+   <b:else/>
+      <b:if cond='data:view.isMultipleItems'>
+         <b:if cond='data:view.isHomepage'>
+            <b:if cond='data:blog.isMobile'>
+               <meta content='noindex,noarchive' name='robots'/>
+            <b:else/>
+			   <meta content='index,follow' name='robots'/>
+            </b:if>
+            <meta content='noodp,noydir' name='robots'/>
+         <b:else/>
+            <meta content='noindex,nofollow' name='robots'/>
+         </b:if>
+      <b:else/>
+         <b:if cond='data:blog.isMobile'>
+            <meta content='noindex,noarchive' name='robots'/>
+         <b:else/>
+			<meta content='index,follow' name='robots'/>
+         </b:if>
+         <meta content='noodp,noydir' name='robots'/>
+      </b:if>
+   </b:if>
+</b:if>
+
+<!-- Optimizando los post -->
+<b:if cond='data:view.isPost'>
+   <!-- La primera imagen del post -->
+   <b:if cond='data:blog.postImageUrl'>
+      <link expr:href='data:blog.postImageUrl' rel='image_src'/>
+      <meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
+      <meta expr:content='data:blog.postImageUrl' property='og:image'/>
+   </b:if>
+</b:if>
+
+<!-- Optimizando Titulos -->
+<meta expr:content='data:blog.title' name='DC.Publisher'/>
+<b:if cond='data:view.isError'>
+   <title>Error 404 en <data:blog.pageTitle/></title>
+<b:else/>
+   <b:if cond='data:blog.url != data:blog.homepageUrl'>
+      <meta expr:content='data:blog.pageName' property='og:title'/>
+      <meta expr:content='data:blog.pageName' name='twitter:title'/>
+      <meta expr:content='data:blog.pageName' name='DC.title'/>
+      <b:if cond='data:blog.pageName'>
+         <title><data:blog.pageName/></title>
+      <b:else/>
+         <title><data:blog.pageTitle/></title>
+      </b:if>
+   <b:else/>
+      <meta expr:content='data:blog.pageTitle' property='og:title'/>
+      <meta expr:content='data:blog.pageTitle' name='twitter:title'/>
+      <meta expr:content='data:blog.pageTitle' name='DC.title'/>
+      <title><data:blog.pageTitle/></title>
+   </b:if>
+</b:if>
+
+<!-- Fin de etiquetas meta -->
+
+<!-- Incluimos los datos de blogger -->
+<!-- favicon -->
+<b:tag cond='data:blog.blogspotFaviconUrl' expr:href='data:blog.blogspotFaviconUrl' name='link' rel='icon' type='image/x-icon'/>
+
+<!-- feeds -->
+<b:tag cond='data:blog.feedLinks' expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' name='link' rel='alternate' type='application/atom+xml'/>
+<b:tag cond='data:blog.feedLinks' expr:href='data:blog.homepageUrl + &quot;feeds/posts/default?alt=rss&quot;' expr:title='data:blog.title + &quot; - RSS&quot;' name='link' rel='alternate' type='application/rss+xml'/>
+
+<!-- schema ld+json -->
+<script type='application/ld+json'>
+{&quot;@context&quot;:&quot;http://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;<data:blog.title/>&quot;,&quot;url&quot;:&quot;<data:blog.homepageUrl/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:blog.homepageUrl/>search?q={search_term_string}&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}}
+</script>
+
+<!-- HTML5 para IE9 -->
+<!--[if lt IE 9]>
+   <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+<!-- Fin de datos-->
+
+<style type='text/css'>/*<![CDATA[*/
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}img,legend{max-width:100%}audio,canvas,img,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{padding:0;box-sizing:border-box}*,::after,::before,legend{box-sizing:border-box}a,table{background-color:transparent}.embed,sub,sup{position:relative}html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{-webkit-text-decoration-skip:objects;color:#2196f3;text-decoration:none}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none;vertical-align:middle}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}body{margin:0;font-family:"Helvetica Neue",arial,sans-serif;font-size:1rem;font-weight:400;overflow-x:hidden}a:focus,a:hover{color:#1565c0;text-decoration:underline}a:active,a:hover{outline-width:0}ol,ul{padding-left:0rem}ol,ol li,ul,ul li{margin:0;list-style:none}h1,h2,h3,h4,h5,h6{font-weight:500;margin:0}h2{font-size:1.5rem}h3{font-size:1.4rem}h4{font-size:1.3rem}h5{font-size:1.2rem}h6{font-size:1.1rem}table{border-spacing:0;border-collapse:collapse}[role=button],a,button,input,label,select,textarea{touch-action:manipulation}p{margin:0}.none{display:none!important}.no-style{background:none;padding:0;margin:0;border:0;outline:0;box-shadow:0 0 transparent;font:inherit}.center{display:block;margin-left:auto;margin-right:auto}.center-text{text-align:center}.clearfix::after{display:block;content:"";clear:both}.flex{display:flex}.wrap{flex-wrap:wrap}.wrap-reverse{flex-wrap:wrap-reverse}.column{flex-direction:column}.column-reverse{flex-direction:column-reverse}.row{flex-direction:row}.row-reverse{flex-direction:row-reverse}.order-first{order:-1}.order-last{order:1}.no-order{order:0}.justify-content-center{justify-content:center}.justify-content-end{justify-content:flex-end}.justify-content-start{justify-content:flex-start}.justify-content-around{justify-content:space-around}.justify-content-between{justify-content:space-between}.align-content-center{align-content:center}.align-content-end{align-content:flex-end}.align-content-start{align-content:flex-start}.align-content-around{align-content:space-around}.align-content-between{align-content:space-between}.align-content-stretch{align-content:stretch}.align-items-baseline{align-items:baseline}.align-items-center{align-items:center}.align-items-end{align-items:flex-end}.align-items-start{align-items:flex-start}.align-items-stretch{align-items:stretch}.align-self-auto{align-self:auto}.align-self-baseline{align-self:baseline}.align-self-center{align-self:center}.align-self-end{align-self:flex-end}.align-self-start{align-self:flex-start}.align-self-stretch{align-self:stretch}.button{display:inline-block;white-space:nowrap;font-weight:400;line-height:1.25;user-select:none;font-size:100%;padding:.6em 1em;text-decoration:none!important;color:rgba(0,0,0,.5);cursor:pointer;vertical-align:middle}embed,iframe,object{margin:0;padding:0;border:0;outline:0}.embed{padding-bottom:56.25%;height:0}.embed embed,.embed iframe,.embed object,.embed video{width:100%;height:100%;position:absolute;top:0;bottom:0;left:0}.table{display:block;width:100%;overflow-x:auto}.container{margin-right:auto;margin-left:auto;padding-left:1rem;padding-right:1rem}
+/*]]>*/</style>
+
+<style type='text/css'>/*<![CDATA[*/
+/* => GLOBAL */
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v7/UyYrYy3ltEffJV9QueSi4SppsHecKHw584ktcwPXSnc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v7/UyYrYy3ltEffJV9QueSi4Uvi3q9-zTdQoLrequQTguk.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v7/UyYrYy3ltEffJV9QueSi4T3sPXe5Q4a3bCZMR7ryN4o.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v7/UyYrYy3ltEffJV9QueSi4UU-p1xzoRgkupcXIqgYFBc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url(https://fonts.gstatic.com/s/ptsansnarrow/v7/Q_pTky3Sc3ubRibGToTAYryh_4Vx_7RIyhQ3vqTJYis.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url(https://fonts.gstatic.com/s/ptsansnarrow/v7/Q_pTky3Sc3ubRibGToTAYuICWD8dS1fawAsHP3zkW40.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url(https://fonts.gstatic.com/s/ptsansnarrow/v7/Q_pTky3Sc3ubRibGToTAYmwfvudCZ8RknLCBmdpmlzc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url(https://fonts.gstatic.com/s/ptsansnarrow/v7/Q_pTky3Sc3ubRibGToTAYhKUK2vxztsQZZBkxIuj92o.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/*end hack*/
+html {font-size: 14px;}
+body{
+  background: -webkit-linear-gradient(black 10%, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(black 10%, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(black 10%, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(black 10%, white); /* Standard syntax */
+  background-repeat: no-repeat;
+}
+.mott {
+    font-size: 2rem;
+    display: inline-block;
+    line-height: initial;
+    color: rgba(0, 0, 0, 0.5);
+}
+.info {
+    background-color: rgba(0,0,0,0.05);
+    color: rgba(0,0,0,0.5);
+    display: block;
+    margin: .5rem 0;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+/*container*/
+.container{
+  max-width: 1220px;
+  padding: 0;
+}
+/*header*/
+header{
+  background: -webkit-linear-gradient(#0e0e0e, #393939); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#0e0e0e, #393939); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#0e0e0e, #393939); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#0e0e0e, #393939); /* Standard syntax */
+  border-bottom: 2px solid ;
+}
+/*logo*/
+.logo{
+  padding: .6rem 0 .7rem 0;
+}
+.logo span a{
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3.2rem;
+  color:#fff;
+  text-decoration:none;
+}
+.logo p{
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -.5px;
+  color: #02a360;
+}
+/*menu*/
+.drop-menu:before {
+    content: "";
+    height: 4px;
+    top: -4px;
+    width: calc(30% + 1em);
+    right: 0;
+    display: block;
+    position: absolute;
+}
+.drop-menu{
+  background: rgb(251, 247, 239);
+  margin: .8rem auto;
+  border-radius: 3px;
+    position: relative;
+    z-index: 900;
+}
+.drop-menu a{
+  padding: .8rem 2rem;
+  display: block;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  color:rgba(0, 0, 0, 0.5);
+    -webkit-transition: background .3s;
+    transition: background .3s;
+  font-weight: 700;
+  font-size: .87rem;
+  text-transform: uppercase;
+}
+.drop-menu a span{
+  display: block;
+  font-weight: normal;
+  margin: auto;
+}
+/*sidebar styles*/
+.main,.sidebar1 .widget,.sidebar2 .widget{
+  background: rgb(251, 247, 239);
+  border:1px solid rgb(231, 149, 25);
+  border-radius: 3px;
+  margin-bottom: .7rem;
+}
+/*sidebar one*/
+.sidebar1{
+  width: 12%;
+}
+.sidebar1 .widget h3{
+  color: rgba(0, 0, 0, 0.61);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: .7rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(238, 186, 0)
+}
+/*sidebar two*/
+.sidebar2{
+  width: 30%
+}
+.sidebar2 .widget-content{
+  background: rgba(255, 255, 255, 0.65);
+  width: 100%;
+  text-align: center;
+  color: #777;
+}
+.sidebar2 .publi{
+min-height:300px;
+}
+.sidebar2 h2.title,.sidebar1 h2.title{
+padding:.3rem;
+font-size: 1.34rem;
+}
+/*main style*/
+.main{
+  width: 58%;
+  margin:0 .7rem;
+}
+
+/*Global menu nivel*/
+
+.menu li ul {
+    position: absolute;
+}
+.menu li {
+    position: relative;
+}
+
+.menu{
+margin :0;
+padding:0;   
+}
+
+  .menu i{display:inline-block;margin-left:-17px;}
+
+.menu li ul {
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transition: max-height .3s, -webkit-transform .3s;
+    transition: max-height .3s, -webkit-transform .3s;
+    transition: transform .3s, max-height .3s;
+    transition: transform .3s, max-height .3s, -webkit-transform .3s;
+    min-width: 210px;
+    max-height: 0;    
+	border-top:4px solid rgb(231, 149, 25);
+}
+
+.menu li:hover > ul {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    max-height: 1000px;padding:0; 
+}
+/*primer nivel*/
+.menu > li {
+    float: left;
+}
+/*segundo nivel*/
+.menu > li > ul {
+    top: 100%;
+	padding:0;
+	background: rgb(251, 247, 239);
+}
+
+.menu > li > ul a{
+	text-align:left;text-transform:capitalize;
+	border-bottom:1px solid rgba(0, 0, 0, 0.15);
+}
+.menu > li > ul li:hover > a {
+    background: rgb(251, 247, 239);
+}
+/*multiple nivel*/
+.menu ul ul {
+    left: 100%;
+    top: 0%;
+	padding:0;
+}
+
+.ver{-moz-box-shadow:inset 0 1px 0 0 #f9eca0;-webkit-box-shadow:inset 0 1px 0 0 #f9eca0;box-shadow:inset 0 1px 0 0 #f9eca0;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#f0c911),color-stop(1,#f2ab1e));background:-moz-linear-gradient(top,#f0c911 5%,#f2ab1e 100%);background:-webkit-linear-gradient(top,#f0c911 5%,#f2ab1e 100%);background:-o-linear-gradient(top,#f0c911 5%,#f2ab1e 100%);background:-ms-linear-gradient(top,#f0c911 5%,#f2ab1e 100%);background:linear-gradient(to bottom,#f0c911 5%,#f2ab1e 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911',endColorstr='#f2ab1e',GradientType=0);background-color:#f0c911;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;border:1px solid #e65f44;display:inline-block;cursor:pointer;color:#c92200;font-family:Trebuchet MS;font-size:10px;font-weight:bold;padding:1px 12px;text-decoration:none;text-shadow:0 1px 0 #ded17c}
+
+.ver:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#f2ab1e),color-stop(1,#f0c911));background:-moz-linear-gradient(top,#f2ab1e 5%,#f0c911 100%);background:-webkit-linear-gradient(top,#f2ab1e 5%,#f0c911 100%);background:-o-linear-gradient(top,#f2ab1e 5%,#f0c911 100%);background:-ms-linear-gradient(top,#f2ab1e 5%,#f0c911 100%);background:linear-gradient(to bottom,#f2ab1e 5%,#f0c911 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e',endColorstr='#f0c911',GradientType=0);background-color:#f2ab1e}
+
+.ver:active{position:relative;top:1px}
+
+/*Canales Widget Custom*/
+.canales a{
+  display: block;
+  padding: .5rem;
+  border-top: 1px solid rgb(221, 221, 221);
+  margin:auto;
+}
+/*Deportes Iconos y Online and Offline*/
+.sport-icon{vertical-align:middle;display:inline-block;width:20px;height:20px;margin:0 3px 0 0;background:transparent url('http://cricfree.sc/images/menu2.png') -1px -1px no-repeat}
+.other-icon{vertical-align:middle;display:inline-block;width:29px;height:20px;margin:0 3px 0 0;background:transparent url('http://cricfree.sc/images/menu2.png') -1px -1px no-repeat}
+
+.live-icon{vertical-align:middle;display:inline-block;width:17px;height:17px;margin:0 3px 0 0;
+  background:transparent url('http://cricfree.sc/images/liveG.gif') -1px -1px no-repeat}
+
+.nolive-icon{vertical-align:middle;display:inline-block;width:14px;height:14px;margin:0 3px 0 0;background:transparent url('http://cricfree.sc/images/notlive.png') -1px -1px no-repeat}
+
+.moreicons{vertical-align:middle;display:inline-block;margin:0 3px 0 0;background:transparent url('/images/logosimg.png') -1px -1px no-repeat}
+.sport-icon.futbol{background-position:-1px -484px}
+.sport-icon.hockey{background-position:-1px -400px}
+.sport-icon.tenis{background-position:-1px -505px}
+.sport-icon.basquetbol{background-position:-1px -169px}
+.sport-icon.balonmano{background-position:-1px -379px}
+.sport-icon.voleibol{background-position:-1px -547px}
+.sport-icon.beisbol {background-position:-1px -148px}
+.sport-icon.futbol-americano{background-position:-1px -43px}
+.sport-icon.rugby{background-position:-1px -463px}
+.sport-icon.minority{background-position:-1px -22px}
+.sport-icon.futbol-australiano{background-position:-1px -64px}
+.sport-icon.badminton{background-position:-1px -85px}
+.sport-icon.bandy{background-position:-1px -127px}
+.sport-icon.voleibol-playa{background-position:-1px -211px}
+.sport-icon.boxeo{background-position:-1px -232px}.sport-icon.floorball{background-position:-1px -316px}.sport-icon.futsala{background-position:-1px -337px}.sport-icon.criquet{background-position:-1px -253px}
+.sport-icon.mma{background-position:-1px -526px}
+.sport-icon.futbol-playa{background-position:-1px -190px}
+.sport-icon.field-hockey{background-position:-1px -295px}
+.sport-icon.rugby-league{background-position:-1px -442px}
+.sport-icon.snooker{background-position:-1px -106px}
+.sport-icon.table-tennis{background-position:-1px -421px}
+.sport-icon.dardo{background-position:-1px -274px}
+.sport-icon.water-polo{background-position:-1px -568px}
+.sport-icon.netball{background-position:-1px -589px}
+.sport-icon.golf{background-position:-1px -610px}
+.sport-icon.pesapallo{background-position:-1px -631px}
+.sport-icon.motorsport{background-position:-1px -652px}
+.sport-icon.motorsport-auto-racing{background-position:-1px -673px}
+.sport-icon.motorsport-moto-racing{background-position:-1px -694px}
+.sport-icon.cycle{background-position:-1px -715px}
+.sport-icon.ufc{background-position:-1px -736px}
+.sport-icon.moto{background-position:-1px -757px}
+.sport-icon.afl{background-position:-1px -778px}
+.sport-icon.more{background-position:-22px -1px}
+/*Pais Iconos*/
+
+/*!
+ * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
+ */
+
+.flag {
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    background: url('https://4.bp.blogspot.com/-7LKgyxCQW94/WXYAxxlgGDI/AAAAAAAAA8k/BpMKeIorLGI83oSumiBYAGOl7hfqP-rTACLcBGAs/s000/paises-flags.png') no-repeat;
+}
+
+
+.flag.flag-arabiasaudita  {
+    background-position: -128px -121px;
+}
+
+.flag.flag-noruega {
+    background-position: -256px -99px;
+}
+
+.flag.flag-singapur {
+    background-position: -224px -121px;
+}
+
+.flag.flag-chad {
+    background-position: -240px -132px;
+}
+
+.flag.flag-kuwait {
+    background-position: -112px -77px;
+}
+
+.flag.flag-niger {
+    background-position: -176px -99px;
+}
+
+.flag.flag-sanmarino {
+    background-position: -48px -132px;
+}
+
+.flag.flag-inglaterra {
+    background-position: -192px -33px;
+}
+
+.flag.flag-chile {
+    background-position: -144px -22px;
+}
+
+.flag.flag-guam {
+    background-position: -96px -55px;
+}
+
+.flag.flag-ciudaddevaticano {
+    background-position: -48px -154px;
+}
+
+.flag.flag-indonesia {
+    background-position: -256px -55px;
+}
+
+.flag.flag-islabouvet {
+    background-position: -224px -11px;
+}
+
+.flag.flag-laos {
+    background-position: -160px -77px;
+}
+
+.flag.flag-tibet {
+    background-position: -32px -143px;
+}
+
+.flag.flag-grecia {
+    background-position: -48px -55px;
+}
+
+.flag.flag-tuvalu {
+    background-position: -176px -143px;
+}
+
+.flag.flag-palestina {
+    background-position: -240px -110px;
+}
+
+.flag.flag-camboya {
+    background-position: 0 -77px;
+}
+
+.flag.flag-st {
+    background-position: -144px -132px;
+}
+
+.flag.flag-islascanarias {
+    background-position: -240px -55px;
+}
+
+.flag.flag-gibraltar {
+    background-position: -224px -44px;
+}
+
+.flag.flag-islassolomon {
+    background-position: -144px -121px;
+}
+
+.flag.flag-suazilandia {
+    background-position: -208px -132px;
+}
+
+.flag.flag-israel {
+    background-position: -16px -66px;
+}
+
+.flag.flag-reunion {
+    background-position: -48px -121px;
+}
+
+.flag.flag-moldavia {
+    background-position: -96px -88px;
+}
+
+.flag.flag-burundi {
+    background-position: -96px -11px;
+}
+
+.flag.flag-eslovenia {
+    background-position: -256px -121px;
+}
+
+.flag.flag-nigeria {
+    background-position: -208px -99px;
+}
+
+.flag.flag-unioneuropea {
+    background-position: -256px -33px;
+}
+
+.flag.flag-nicaragua {
+    background-position: -224px -99px;
+}
+
+.flag.flag-eritrea {
+    background-position: -208px -33px;
+}
+
+.flag.flag-bd {
+    background-position: -16px -11px;
+}
+
+.flag.flag-costademarfil {
+    background-position: -112px -22px;
+}
+
+.flag.flag-tl {
+    background-position: -80px -143px;
+}
+
+.flag.flag-ug {
+    background-position: -240px -143px;
+}
+
+.flag.flag-oman {
+    background-position: -64px -110px;
+}
+
+.flag.flag-malta {
+    background-position: -32px -99px;
+}
+
+.flag.flag-tf {
+    background-position: -256px -132px;
+}
+
+.flag.flag-gm {
+    background-position: -256px -44px;
+}
+
+.flag.flag-india {
+    background-position: -64px -66px;
+}
+
+.flag.flag-vi {
+    background-position: -112px -154px;
+}
+
+.flag.flag-mr {
+    background-position: 0 -99px;
+}
+
+.flag.flag-uzbekistan {
+    background-position: -32px -154px;
+}
+
+.flag.flag-zanzibar {
+    background-position: 0 -165px;
+}
+
+.flag.flag-camerun {
+    background-position: -160px -22px;
+}
+
+.flag.flag-bf {
+    background-position: -48px -11px;
+}
+
+.flag.flag-jersey {
+    background-position: -176px -66px;
+}
+
+.flag.flag-gq {
+    background-position: -32px -55px;
+}
+
+.flag.flag-so {
+    background-position: -80px -132px;
+}
+
+.flag.flag-montenegro {
+    background-position: -112px -88px;
+}
+
+.flag.flag-pakistan {
+    background-position: -160px -110px;
+}
+
+.flag.flag-taiwan {
+    background-position: -192px -143px;
+}
+
+.flag.flag-serbia {
+    background-position: -80px -121px;
+}
+
+.flag.flag-haiti {
+    background-position: -208px -55px;
+}
+
+.flag.flag-coreadelsur {
+    background-position: -80px -77px;
+}
+
+.flag.flag-egipto {
+    background-position: -160px -33px;
+}
+
+.flag.flag-ax {
+    background-position: -224px 0;
+}
+
+.flag.flag-cv {
+    background-position: -240px -22px;
+}
+
+.flag.flag-nauru {
+    background-position: -16px -110px;
+}
+
+.flag.flag-republicacheca {
+    background-position: -16px -33px;
+}
+
+.flag.flag-polonia {
+    background-position: -176px -110px;
+}
+
+.flag.flag-puertorico {
+    background-position: -224px -110px;
+}
+
+.flag.flag-montserrat {
+    background-position: -16px -99px;
+}
+
+.flag.flag-eh {
+    background-position: -176px -33px;
+}
+
+.flag.flag-austria {
+    background-position: -176px 0;
+}
+
+.flag.flag-granada {
+    background-position: -128px -44px;
+}
+
+.flag.flag-bolivia {
+    background-position: -160px -11px;
+}
+
+.flag.flag-libia {
+    background-position: -48px -88px;
+}
+
+.flag.flag-georgia {
+    background-position: -144px -44px;
+}
+
+.flag.flag-pm {
+    background-position: -192px -110px;
+}
+
+.flag.flag-barbados {
+    background-position: 0 -11px;
+}
+
+.flag.flag-iran {
+    background-position: -112px -66px;
+}
+
+.flag.flag-kn {
+    background-position: -48px -77px;
+}
+
+.flag.flag-ec {
+    background-position: -128px -33px;
+}
+
+.flag.flag-guayanafrancesa {
+    background-position: -160px -44px;
+}
+
+.flag.flag-argentina {
+    background-position: -144px 0;
+}
+
+.flag.flag-vg {
+    background-position: -96px -154px;
+}
+
+.flag.flag-hungria {
+    background-position: -224px -55px;
+}
+
+.flag.flag-sd {
+    background-position: -192px -121px;
+}
+
+.flag.flag-elsalvador {
+    background-position: -160px -132px;
+}
+
+.flag.flag-wf {
+    background-position: -176px -154px;
+}
+
+.flag.flag-tn {
+    background-position: -112px -143px;
+}
+
+.flag.flag-coreadelnorte {
+    background-position: -64px -77px;
+}
+
+.flag.flag-italia {
+    background-position: -144px -66px;
+}
+
+.flag.flag-li {
+    background-position: -208px -77px;
+}
+
+.flag.flag-libano {
+    background-position: -176px -77px;
+}
+
+.flag.flag-angola {
+    background-position: -128px 0;
+}
+
+.flag.flag-luxemburgo {
+    background-position: -16px -88px;
+}
+
+.flag.flag-kenia {
+    background-position: -240px -66px;
+}
+
+.flag.flag-trinidadytobago {
+    background-position: -160px -143px;
+}
+
+.flag.flag-kz {
+    background-position: -144px -77px;
+}
+
+.flag.flag-gg {
+    background-position: -192px -44px;
+}
+
+.flag.flag-tokelau {
+    background-position: -64px -143px;
+}
+
+.flag.flag-jamaica {
+    background-position: -192px -66px;
+}
+
+.flag.flag-macao {
+    background-position: -224px -88px;
+}
+
+.flag.flag-nuevazelanda {
+    background-position: -48px -110px;
+}
+
+.flag.flag-lk {
+    background-position: -224px -77px;
+}
+
+.flag.flag-emiratosarabes {
+    background-position: -16px 0;
+}
+
+.flag.flag-wales {
+    background-position: -160px -154px;
+}
+
+.flag.flag-sj {
+    background-position: 0 -132px;
+}
+
+.flag.flag-bermudas {
+    background-position: -128px -11px;
+}
+
+.flag.flag-bielorrusia {
+    background-position: -256px -11px;
+}
+
+.flag.flag-sr {
+    background-position: -112px -132px;
+}
+
+.flag.flag-dominica {
+    background-position: -80px -33px;
+}
+
+.flag.flag-nu {
+    background-position: -32px -110px;
+}
+
+.flag.flag-kirguistan {
+    background-position: -256px -66px;
+}
+
+.flag.flag-uruguay {
+    background-position: -16px -154px;
+}
+
+.flag.flag-cy {
+    background-position: 0 -33px;
+}
+
+.flag.flag-portugal {
+    background-position: -256px -110px;
+}
+
+.flag.flag-madagascar {
+    background-position: -128px -88px;
+}
+
+.flag.flag-io {
+    background-position: -80px -66px;
+}
+
+.flag.flag-sc {
+    background-position: -160px -121px;
+}
+
+.flag.flag-mauricio {
+    background-position: -48px -99px;
+}
+
+.flag.flag-ss {
+    background-position: -128px -132px;
+}
+
+.flag.flag-senegal {
+    background-position: -64px -132px;
+}
+
+.flag.flag-honduras {
+    background-position: -176px -55px;
+}
+
+.flag.flag-turquia {
+    background-position: -144px -143px;
+}
+
+.flag.flag-ag {
+    background-position: -48px 0;
+}
+
+.flag.flag-irak {
+    background-position: -96px -66px;
+}
+
+.flag.flag-yemen {
+    background-position: -224px -154px;
+}
+
+.flag.flag-bh {
+    background-position: -80px -11px;
+}
+
+.flag.flag-az {
+    background-position: -240px 0;
+}
+
+.flag.flag-rumania {
+    background-position: -64px -121px;
+}
+
+.flag.flag-micronesia {
+    background-position: -48px -44px;
+}
+
+.flag.flag-aruba {
+    background-position: -208px 0;
+}
+
+.flag.flag-malasia {
+    background-position: -112px -99px;
+}
+
+.flag.flag-francia {
+    background-position: -80px -44px;
+}
+
+.flag.flag-suecia {
+    background-position: -208px -121px;
+}
+
+.flag.flag-mk {
+    background-position: -160px -88px;
+}
+
+.flag.flag-cd {
+    background-position: -48px -22px;
+}
+
+.flag.flag-monaco {
+    background-position: -80px -88px;
+}
+
+.flag.flag-liberia {
+    background-position: -240px -77px;
+}
+
+.flag.flag-fo {
+    background-position: -64px -44px;
+}
+
+.flag.flag-martinica {
+    background-position: -256px -88px;
+}
+
+.flag.flag-tonga {
+    background-position: -128px -143px;
+}
+
+.flag.flag-guyana {
+    background-position: -128px -55px;
+}
+
+.flag.flag-mv {
+    background-position: -64px -99px;
+}
+
+.flag.flag-na {
+    background-position: -144px -99px;
+}
+
+.flag.flag-tm {
+    background-position: -96px -143px;
+}
+
+.flag.flag-as {
+    background-position: -160px 0;
+}
+
+.flag.flag-estadosunidos {
+    background-position: 0 -154px;
+}
+
+.flag.flag-pn {
+    background-position: -208px -110px;
+}
+
+.flag.flag-fiyi {
+    background-position: -16px -44px;
+}
+
+.flag.flag-andorra {
+    background-position: 0 0;
+}
+
+.flag.flag-vc {
+    background-position: -64px -154px;
+}
+
+.flag.flag-palaos {
+    background-position: 0 -121px;
+}
+
+.flag.flag-nepal {
+    background-position: 0 -110px;
+}
+
+.flag.flag-belice {
+    background-position: 0 -22px;
+}
+
+.flag.flag-japon {
+    background-position: -224px -66px;
+}
+
+.flag.flag-mm {
+    background-position: -192px -88px;
+}
+
+.flag.flag-guadalupe {
+    background-position: -16px -55px;
+}
+
+.flag.flag-australia {
+    background-position: -192px 0;
+}
+
+.flag.flag-et {
+    background-position: -240px -33px;
+}
+
+.flag.flag-tailandia {
+    background-position: -16px -143px;
+}
+
+.flag.flag-argelia {
+    background-position: -112px -33px;
+}
+
+.flag.flag-brasil {
+    background-position: -176px -11px;
+}
+
+.flag.flag-catalonia {
+    background-position: -32px -22px;
+}
+
+.flag.flag-ls {
+    background-position: -256px -77px;
+}
+
+.flag.flag-zm {
+    background-position: -16px -165px;
+}
+
+.flag.flag-kosovo {
+    background-position: -208px -154px;
+}
+
+.flag.flag-paraguay {
+    background-position: -16px -121px;
+}
+
+.flag.flag-armenia {
+    background-position: -96px 0;
+}
+
+.flag.flag-scotland {
+    background-position: -176px -121px;
+}
+
+.flag.flag-islascook {
+    background-position: -128px -22px;
+}
+
+.flag.flag-siria {
+    background-position: -192px -132px;
+}
+
+.flag.flag-hongkong {
+    background-position: -144px -55px;
+}
+
+.flag.flag-bt {
+    background-position: -208px -11px;
+}
+
+.flag.flag-sh {
+    background-position: -240px -121px;
+}
+
+.flag.flag-cr {
+    background-position: -208px -22px;
+}
+
+.flag.flag-groenlandia {
+    background-position: -240px -44px;
+}
+
+.flag.flag-letonia {
+    background-position: -32px -88px;
+}
+
+.flag.flag-sl {
+    background-position: -32px -132px;
+}
+
+.flag.flag-rw {
+    background-position: -112px -121px;
+}
+
+.flag.flag-mh {
+    background-position: -144px -88px;
+}
+
+.flag.flag-vanuatu {
+    background-position: -144px -154px;
+}
+
+.flag.flag-anguila {
+    background-position: -64px 0;
+}
+
+.flag.flag-mz {
+    background-position: -128px -99px;
+}
+
+.flag.flag-gh {
+    background-position: -208px -44px;
+}
+
+.flag.flag-irlanda {
+    background-position: 0 -66px;
+}
+
+.flag.flag-vietnam {
+    background-position: -128px -154px;
+}
+
+.flag.flag-colombia {
+    background-position: -192px -22px;
+}
+
+.flag.flag-sudafrica {
+    background-position: -256px -154px;
+}
+
+.flag.flag-lc {
+    background-position: -192px -77px;
+}
+
+.flag.flag-mw {
+    background-position: -80px -99px;
+}
+
+.flag.flag-yt {
+    background-position: -240px -154px;
+}
+
+.flag.flag-tg {
+    background-position: 0 -143px;
+}
+
+.flag.flag-ml {
+    background-position: -176px -88px;
+}
+
+.flag.flag-ucrania {
+    background-position: -224px -143px;
+}
+
+.flag.flag-islandia {
+    background-position: -128px -66px;
+}
+
+.flag.flag-dinamarca {
+    background-position: -64px -33px;
+}
+
+.flag.flag-tc {
+    background-position: -224px -132px;
+}
+
+.flag.flag-bahamas {
+    background-position: -192px -11px;
+}
+
+.flag.flag-catar {
+    background-position: -32px -121px;
+}
+
+.flag.flag-gw {
+    background-position: -112px -55px;
+}
+
+.flag.flag-nuevacaledonia {
+    background-position: -160px -99px;
+}
+
+.flag.flag-gs {
+    background-position: -64px -55px;
+}
+
+.flag.flag-nf {
+    background-position: -192px -99px;
+}
+
+.flag.flag-belgica {
+    background-position: -32px -11px;
+}
+
+.flag.flag-kurdistan {
+    background-position: -96px -77px;
+}
+
+.flag.flag-comoras {
+    background-position: -32px -77px;
+}
+
+.flag.flag-guatemala {
+    background-position: -80px -55px;
+}
+
+.flag.flag-cf {
+    background-position: -64px -22px;
+}
+
+.flag.flag-tayikistan {
+    background-position: -48px -143px;
+}
+
+.flag.flag-cuba {
+    background-position: -224px -22px;
+}
+
+.flag.flag-ga {
+    background-position: -96px -44px;
+}
+
+.flag.flag-españa {
+    background-position: -224px -33px;
+}
+
+.flag.flag-cg {
+    background-position: -80px -22px;
+}
+
+.flag.flag-kiribati {
+    background-position: -16px -77px;
+}
+
+.flag.flag-finlandia {
+    background-position: 0 -44px;
+}
+
+.flag.flag-canada {
+    background-position: -16px -22px;
+}
+
+.flag.flag-rusia {
+    background-position: -96px -121px;
+}
+
+.flag.flag-reinounido {
+    background-position: -112px -44px;
+}
+
+.flag.flag-albania {
+    background-position: -80px 0;
+}
+
+.flag.flag-um {
+    background-position: -256px -143px;
+}
+
+.flag.flag-bn {
+    background-position: -144px -11px;
+}
+
+.flag.flag-curazao {
+    background-position: -256px -22px;
+}
+
+.flag.flag-estonia {
+    background-position: -144px -33px;
+}
+
+.flag.flag-china {
+    background-position: -176px -22px;
+}
+
+.flag.flag-costarica {
+    background-position: -192px -55px;
+}
+
+.flag.flag-ba {
+    background-position: -256px 0;
+}
+
+.flag.flag-mexico {
+    background-position: -96px -99px;
+}
+
+.flag.flag-ky {
+    background-position: -128px -77px;
+}
+
+.flag.flag-venezuela {
+    background-position: -80px -154px;
+}
+
+.flag.flag-holanda {
+    background-position: -240px -99px;
+}
+
+.flag.flag-republicadominicana {
+    background-position: -96px -33px;
+}
+
+.flag.flag-pg {
+    background-position: -128px -110px;
+}
+
+.flag.flag-benin {
+    background-position: -112px -11px;
+}
+
+.flag.flag-dj {
+    background-position: -48px -33px;
+}
+
+.flag.flag-bw {
+    background-position: -240px -11px;
+}
+
+.flag.flag-filipinas {
+    background-position: -144px -110px;
+}
+
+.flag.flag-zw {
+    background-position: -32px -165px;
+}
+
+.flag.flag-im {
+    background-position: -48px -66px;
+}
+
+.flag.flag-panama {
+    background-position: -80px -110px;
+}
+
+.flag.flag-peru {
+    background-position: -96px -110px;
+}
+
+.flag.flag-fk {
+    background-position: -32px -44px;
+}
+
+.flag.flag-suiza {
+    background-position: -96px -22px;
+}
+
+.flag.flag-sx {
+    background-position: -176px -132px;
+}
+
+.flag.flag-eslovaquia {
+    background-position: -16px -132px;
+}
+
+.flag.flag-af {
+    background-position: -32px 0;
+}
+
+.flag.flag-ghana {
+    background-position: 0 -55px;
+}
+
+.flag.flag-hm {
+    background-position: -160px -55px;
+}
+
+.flag.flag-bulgaria {
+    background-position: -64px -11px;
+}
+
+.flag.flag-alemania {
+    background-position: -32px -33px;
+}
+
+.flag.flag-tz {
+    background-position: -208px -143px;
+}
+
+.flag.flag-an {
+    background-position: -112px 0;
+}
+
+.flag.flag-somaliland {
+    background-position: -96px -132px;
+}
+
+.flag.flag-mp {
+    background-position: -240px -88px;
+}
+
+.flag.flag-polinesiafrancesa {
+    background-position: -112px -110px;
+}
+
+.flag.flag-mongolia {
+    background-position: -208px -88px;
+}
+
+.flag.flag-jordania {
+    background-position: -208px -66px;
+}
+
+.flag.flag-lituania {
+    background-position: 0 -88px;
+}
+
+.flag.flag-marruecos {
+    background-position: -64px -88px;
+}
+
+.flag.flag-samoa {
+    background-position: -192px -154px;
+}
+
+
+/*Canales Iconos*/
+.channels-icon{vertical-align:middle;display:inline-block;width:112px;height:21px;margin:0 3px 0 0;background:transparent url('http://cricfree.sc/images/finalchlist2.png') -1px -1px no-repeat}.rank.channels-icon{margin-right:0}h2 .channels-icon:nth-of-type(2){margin-left:5px}.channels-icon.schedule{background-position:-1px -1px}.channels-icon.sky1{background-position:-1px -23px}.channels-icon.sky2{background-position:-1px -45px}.channels-icon.sky3{background-position:-1px -67px}.channels-icon.sky4{background-position:-1px -89px}.channels-icon.sky5{background-position:-1px -111px}.channels-icon.skynews{background-position:-1px -133px}.channels-icon.f1{background-position:-1px -155px}.channels-icon.bt1{background-position:-1px -177px}.channels-icon.bt2{background-position:-1px -199px}.channels-icon.euro1{background-position:-1px -221px}.channels-icon.euro2{background-position:-1px -243px}.channels-icon.skycalcio{background-position:-1px -265px}.channels-icon.skyit1{background-position:-1px -287px}.channels-icon.skyit2{background-position:-1px -309px}.channels-icon.skyit3{background-position:-1px -331px}.channels-icon.world{background-position:-1px -353px}.channels-icon.one{background-position:-1px -375px}.channels-icon.ontario{background-position:-1px -397px}.channels-icon.ch1toch20{background-position:-1px -419px}.channels-icon.bn1tobn12{background-position:-1px -441px}.channels-icon.espn{background-position:-1px -463px}.channels-icon.espnusa{background-position:-1px -485px}.channels-icon.espn2{background-position:-1px -507px}.channels-icon.tensport{background-position:-1px -529px}.channels-icon.tenaction{background-position:-1px -551px}.channels-icon.fox1{background-position:-1px -573px}.channels-icon.fox2{background-position:-1px -595px}.channels-icon.tsn1totsn5{background-position:-1px -617px}.channels-icon.nflnetwork{background-position:-1px -639px}.channels-icon.mlb{background-position:-1px -661px}.channels-icon.nba{background-position:-1px -683px}.channels-icon.golf{background-position:-1px -705px}.channels-icon.atrace{background-position:-1px -727px}.channels-icon.raceuk{background-position:-1px -749px}.channels-icon.star1{background-position:-1px -771px}.channels-icon.ptv{background-position:-1px -793px}.channels-icon.willow{background-position:-1px -815px}.channels-icon.itv1toitv4{background-position:-1px -837px}.channels-icon.box{background-position:-122px -1px;}.channels-icon.prem{background-position:-122px -23px;}.channels-icon.mu{background-position:-122px -45px;}.channels-icon.nbcsn{background-position:-122px -67px;}.channels-icon.espnu{background-position:-122px -89px;}.channels-icon.bbc{background-position:-122px -111px;}.channels-icon.sp360{background-position:-122px -133px;}.channels-icon.bteu{background-position:-122px -155px;}.channels-icon.btep{background-position:-122px -177px;}.channels-icon.chtv{background-position:-122px -199px;}.channels-icon.lfc{background-position:-122px -221px;}.channels-icon.moto{background-position:-122px -243px;}.channels-icon.bn1{background-position:-122px -265px;}
+.boxing{
+  background: rgb(231, 149, 25);
+  padding: .55rem;
+  margin-bottom:1rem;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+}
+.boxing span{
+  font-family: verdana;
+  font-size: .9rem;
+  color:#fff;
+  font-weight: 600;display: block;
+}
+.boxing select{
+  margin-top:.5rem;
+}
+footer{
+width:100%;
+padding:20px 0;
+text-align:center;
+background:#1F232F;
+background-repeat:repeat-x;
+border-top:2px solid #000000;
+color:#FDB747;
+text-transform:uppercase;
+margin-top:1rem;
+}
+/*]]>*/</style>
+
+<b:if cond='data:view.isMultipleItems'>
+<style type='text/css'>/*<![CDATA[*/
+/* => SOLO INDEX */
+  h2.title{
+	font-size:1.1rem;
+	margin:0 0 .5rem .7rem;
+}
+.blog-pager a {
+    display: inline-block;
+    padding: .6rem;
+	font-size:.85rem;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    color: #fff;
+	margin:.5rem;
+    font-weight: normal;
+}
+.blog-pager a:active,
+.blog-pager a:focus,
+.blog-pager a:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+.blog-pager i {
+    font-size: .7rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+.items{
+  margin: 1rem 1.2rem;
+  background: rgb(255, 255, 255)
+}
+
+ table {text-align: left;width: 100%; padding:0 1rem;text-align: center;}
+ table tbody td {padding: .5rem .25rem;border: 1px solid #e1e1e1;}
+ table tbody tr a,table tbody tr a:hover{color:#777777;font-weight:700;}
+ table tbody tr {background: #fbf7ef;color:#777777;font-size:.65rem;font-family: Verdana;}
+ table tbody tr:nth-child(2n+1) {background: rgba(255, 255, 255, 1);}
+ table thead {background: #ededed;}
+ table thead th {
+   background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.05, rgb(92, 92, 92)), to(rgb(109, 106, 106))) rgb(92, 92, 92);
+   font-size:.7rem;
+   border: 1px solid rgb(231, 231, 231);
+   padding: .8rem 1.1rem;
+   white-space: nowrap;
+   color:#fff;
+   font-family: Verdana;
+ }
+a.titulo{font-size:.73rem;}
+
+table i::before{
+vertical-align:middle;
+position:relative;
+top:-2px;
+}
+/*]]>*/</style>
+<b:else/>
+
+<style type='text/css'>/*<![CDATA[*/
+/* => TODO MENOS INDEX */
+/*]]>*/</style>
+</b:if>
+
+<b:if cond='data:view.isPost'>
+<style type='text/css'>/*<![CDATA[*/
+/* => ENTRADAS */
+h1.title{
+  background: rgb(231, 149, 25);
+  padding: .8rem;
+  margin-bottom:.05rem;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+  font-family: verdana;
+  font-size: .9rem;
+  color:#fff;
+  font-weight: 600;
+  display: block;
+  text-transform:uppercase;
+}
+.infor{
+background:rgba(0,0,0,.2);
+color:green;
+padding:.6rem;
+text-align: center;
+}
+.items{
+  margin: 1rem 1.2rem;
+  background: rgb(255, 255, 255)
+}
+.content iframe{
+width:100%;
+height:350px;
+}
+
+/* Amida */
+@font-face {
+  font-family: "Amida";
+  src:url(data:application/font-woff;base64,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) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "Amida" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "Amida" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-facebook-official:before {
+  content: "\61";
+}
+.icon-facebook:before {
+  content: "\62";
+}
+.icon-facebook-square:before {
+  content: "\63";
+}
+.icon-github-2:before {
+  content: "\64";
+}
+.icon-github:before {
+  content: "\65";
+}
+.icon-tags:before {
+  content: "\67";
+}
+.icon-tag:before {
+  content: "\68";
+}
+.icon-twitter:before {
+  content: "\69";
+}
+.icon-twitter-circled:before {
+  content: "\6a";
+}
+.icon-twitter-1:before {
+  content: "\6b";
+}
+.icon-home:before {
+  content: "\6c";
+}
+.icon-home-1:before {
+  content: "\6d";
+}
+.icon-user:before {
+  content: "\6e";
+}
+.icon-user-add:before {
+  content: "\6f";
+}
+.icon-torsos:before {
+  content: "\70";
+}
+.icon-google-plus-square:before {
+  content: "\71";
+}
+.icon-google:before {
+  content: "\72";
+}
+.icon-paint-brush:before {
+  content: "\73";
+}
+.icon-pencil:before {
+  content: "\74";
+}
+.icon-comment:before {
+  content: "\78";
+}
+.icon-clock:before {
+  content: "\79";
+}
+.icon-cloud-download:before {
+  content: "\7a";
+}
+.icon-location:before {
+  content: "\41";
+}
+.icon-comment-discussion:before {
+  content: "\42";
+}
+.icon-clock-o:before {
+  content: "\44";
+}
+.icon-heart:before {
+  content: "\49";
+}
+.icon-mark-github:before {
+  content: "\76";
+}
+.icon-octoface:before {
+  content: "\77";
+}
+.icon-social-pinterest:before {
+  content: "\4b";
+}
+.icon-social-github:before {
+  content: "\4c";
+}
+.icon-tumblr:before {
+  content: "\4d";
+}
+.icon-github-1:before {
+  content: "\4a";
+}
+.icon-blogger:before {
+  content: "\4e";
+}
+.icon-youtube:before {
+  content: "\43";
+}
+/*share compartir redes sociales*/
+.share {
+    font-size: 1.05rem;
+	padding:1.2rem .5rem .1rem .5rem ;
+}
+.share a {
+	color: rgba(0,0,0,.6);
+	padding:.6rem .85rem;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    float: left;
+    -webkit-transition: opacity .2s, color .2s; 
+    transition: opacity .2s, color .2s;
+}
+
+.share a.icon-facebook {
+    background: #3C5A99;
+    color: #fff;
+}
+
+.share a.icon-facebook:hover {
+    color: #fff;
+}
+
+.share a::before {
+    display: block;
+}
+
+.share a:hover,
+.share a:focus,
+.share a:active {
+    opacity: 0.7;
+    color: rgba(0,0,0,.8);
+	text-decoration:none;
+}
+/*]]>*/</style>
+</b:if>
+
+<style type='text/css'>/*<![CDATA[*/
+	/*--
+	=> Responsive
+	--*/
+@media only screen and (max-width: 1050px) {
+.menu l{
+  display:none;
+}
+.drop-menu a{
+  padding: .4rem;
+}
+}
+.menu i{display:inline-block;margin-left:0px;}
+@media only screen and (max-width: 940px) {
+.sidebar1,.main,.sidebar2{
+  width: 100%;
+}
+.container{
+  display:flex;
+  flex-wrap:wrap
+}
+.main{
+  margin:0;
+  margin-bottom:1rem;
+}
+.canales a{
+  display: inline-block;
+  padding: .5rem;
+  border-top: 1px solid rgb(221, 221, 221);
+  margin:auto;
+}
+.canales a img{
+  width:100px;
+}
+}
+/*]]>*/</style>
+
+<b:skin><![CDATA[
+/*!
+=> Theme Name: Cricfree CLON
+=> Theme URI: http://www.bygian.com/
+=> Author: ByGian.Com
+=> Author URI: https://www.facebook.com/gianfranco.imperialevivas
+=> License: Creative Commons Atribucion-NoComercial 4.0 Internacional=> 
+License URI: http://creativecommons.org/licenses/by-nc/4.0/*//*Deleted: unnecessary elements*/
+.singleton-element:not(.cookie-choices-info),.item-control.blog-admin,.widget-item-control {display: none;}/*Fix: Blogger lightbox*/.CSS_LIGHTBOX {z-index: 90001 !important;}/*Design: admin blog*/body#layout .left {float: left;width: 50%;}body#layout .right {float: right;width: 50%;}]]></b:skin>
+
+&lt;!--</head>--&gt;&lt;/head&gt;
+
+<body>
+  <header>
+    <div class='container'>
+      <div class='logo'>
+        <span><a href='/'><b>Sport</b>ZoneTV</a></span>
+        <p>home of streaming</p>
+      </div>
+    </div>
+  </header>
+  <div class='drop-menu clearfix container'>
+      <nav>
+          <ul class='menu clearfix'>
+            <li><a href='/search/label/boxeo'><span class='sport-icon boxeo'/> <l>boxeo</l></a></li>
+            <li><a href='/search/label/futbol'><span class='sport-icon futbol'/> <l>futbol</l></a>
+              <ul>
+                <li><a href='/search/label/Premier League'><i class='sport-icon futbol'/> Premier League</a></li>
+                <li><a href='/search/label/Champions League'><i class='sport-icon futbol'/> Champions League</a></li>
+                <li><a href='/search/label/Europa League'><i class='sport-icon futbol'/> Europa League</a></li>
+                <li><a href='/search/label/English FA Cup'><i class='sport-icon futbol'/> English FA Cup</a></li>
+                <li><a href='/search/label/English Championship'><i class='sport-icon futbol'/> English Championship</a></li>
+                <li><a href='/search/label/English Football League Cup'><i class='sport-icon futbol'/> English Football League Cup</a></li>
+                <li><a href='/search/label/Liga BBVA'><i class='sport-icon futbol'/> Liga BBVA</a></li>
+                <li><a href='/search/label/Serie A'><i class='sport-icon futbol'/> Serie A</a></li>
+                <li><a href='/search/label/Scottish Premier League'><i class='sport-icon futbol'/> Scottish Premier League</a></li>
+                <li><a href='/search/label/Scottish Championship'><i class='sport-icon futbol'/> Scottish Championship</a></li>
+                <li><a href='/search/label/Scottish FA Cup'><i class='sport-icon futbol'/> Scottish FA Cup</a></li>
+                <li><a href='/search/label/Bundesliga'><i class='sport-icon futbol'/> Bundesliga</a></li>
+                <li><a href='/search/label/DFB Pokal'><i class='sport-icon futbol'/> DFB Pokal</a></li>
+                <li><a href='/search/label/French Ligue 1'><i class='sport-icon futbol'/> French Ligue 1</a></li>
+                <li><a href='/search/label/French Cup'><i class='sport-icon futbol'/> French Cup</a></li>
+                <li><a href='/search/label/Dutch Eredivisie'><i class='sport-icon futbol'/> Dutch Eredivisie</a></li>
+                <li><a href='/search/label/Dutch Eerste Divisie'><i class='sport-icon futbol'/> Dutch Eerste Divisie</a></li>
+              </ul>
+            </li>
+            <li><a href='/search/label/beisbol'><span class='sport-icon beisbol '/> <l>beisbol</l></a></li>
+            <li><a href='/search/label/tenis'><span class='sport-icon tenis'/> <l>tenis</l></a></li>
+            <li><a href='/search/label/wwe'><span class='sport-icon boxeo'/> <l>wwe</l></a></li>
+            <li><a href='/search/label/basquetbol'><span class='sport-icon basquetbol'/> <l>basquetbol</l></a></li>
+            <li><a href='/search/label/ufc'><span class='sport-icon ufc'/> <l>ufc</l></a></li>
+            <li><a href='/search/label/motors'><span class='sport-icon motorsport'/> <l>motors</l></a></li>
+            <li><a href='/search/label/golf'><span class='sport-icon golf'/> <l>golf</l></a></li>
+            <li><a href=''><span class='sport-icon more'/> <l>more</l></a>
+              <ul>
+                <li><a href=''>Elemento A1</a></li>
+                <li><a href=''>Elemento A2</a></li>
+                <li><a href=''>Elemento A3</a></li>
+              </ul>
+			</li>
+          </ul>
+      </nav>
+    </div>
+
+  <div class='container flex justify-content-center align-content-center'>
+    <div class='sidebar1'>
+  <b:section class='aside' id='sidebar'>
+    <b:widget id='HTML1' locked='false' title='Canales' type='HTML'>
+      <b:widget-settings>
+        <b:widget-setting name='content'>&lt;div class=&#39;canales&#39;&gt;
+
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-8Q6Qa6qC3dc/WW_RDCEo9LI/AAAAAAAAA68/uYKRUnOCTs4SdYuH5Bual9OMA0z9ZZc2QCLcBGAs/s200/Fox_Sports_Australia_Logos.svg.png&quot;/&gt;&lt;/a&gt;
+
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-Z9WlUKfRNdk/WW_TAj3-SZI/AAAAAAAAA7E/HNz1JFaeu60X8QYdvmer3eJwUj7-TNFxwCLcBGAs/s200/foxsportHD.jpg&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-3ZrfajbyOw8/WW_PrzCQlyI/AAAAAAAAA6k/GIHBCQOVTqsl9k26dGjBWtuA6f2FSewnwCLcBGAs/s200/espn1.jpg&quot;/&gt;&lt;/a&gt;
+
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-lYj_P-QJXHc/WW_PsL49Q4I/AAAAAAAAA6o/SDkwwje6SdUXgFAcaX1HMEKyWlVDTLzxQCLcBGAs/s200/espn2.jpg&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-jrcbepK7bPg/WW_PtdV2feI/AAAAAAAAA60/SeRkm3NT5A8LfBYqaHPTmVNtI_sPdauLACLcBGAs/s200/espn3.jpg&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-vgWDV9VIRWY/WW_PsYt9YqI/AAAAAAAAA6s/tfm_C79pO9cHTGRxR3ntDQDpWM2M98cZQCLcBGAs/s200/espn%252B.jpg&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-nr9L1TU6wQQ/WW_Ps20s82I/AAAAAAAAA6w/pIdCHnzB3nULN3HEOaqBIe4P4-oMTbJDwCLcBGAs/s200/espnhd.jpg&quot;/&gt;&lt;/a&gt;
+
+&lt;a href=&quot;http://miblog.blogspot.com&quot;&gt;&lt;img src=&quot;IMAGEN LOGO DEL CANAL&quot;/&gt;&lt;/a&gt;
+
+&lt;a href=&quot;ENLACE DEL CANAL&quot;&gt;&lt;img src=&quot;IMAGEN LOGO DEL CANAL&quot;/&gt;&lt;/a&gt;
+
+&lt;a href=&quot;ENLACE DEL CANAL&quot;&gt;&lt;img src=&quot;IMAGEN LOGO DEL CANAL&quot;/&gt;&lt;/a&gt;
+
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;IMAGEN LOGO DEL CANAL&quot;/&gt;&lt;/a&gt;
+
+&lt;/div&gt;</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+    </b:widget>
+  </b:section>
+    </div>
+
+    <div class='main'>
+      <div class='items'>
+    <b:section cond='data:blog.pageType == &quot;index&quot;' id='Programación' maxwidgets='1' showaddelement='no'>
+      <b:widget id='LinkList10' locked='true' title='Programación' type='LinkList' version='1'>
+        <b:widget-settings>
+          <b:widget-setting name='link-3'>/search/label/Finalizado</b:widget-setting>
+          <b:widget-setting name='sorting'>NONE</b:widget-setting>
+          <b:widget-setting name='link-4'>/search/label/Repetición</b:widget-setting>
+          <b:widget-setting name='text-1'>Mañana</b:widget-setting>
+          <b:widget-setting name='link-1'>/search/label/Mañana</b:widget-setting>
+          <b:widget-setting name='text-0'>Hoy</b:widget-setting>
+          <b:widget-setting name='link-2'>/search/label/Proximamente</b:widget-setting>
+          <b:widget-setting name='text-3'>Finalizado</b:widget-setting>
+          <b:widget-setting name='link-0'>/search/label/Hoy</b:widget-setting>
+          <b:widget-setting name='text-2'>Proximamente</b:widget-setting>
+          <b:widget-setting name='text-4'>Repetición</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+<div class='boxing'>
+  <span>Programacion de juegos</span>
+
+  <select id='timezone-select' onchange='if(options[selectedIndex].value){location = options[selectedIndex].value}' style='font-size:12px; padding-right:15px;'>
+		  <option value=''>Juegos disponible por día    </option>
+    <b:loop values='data:links' var='link'>
+          <option expr:value='data:link.target'><data:link.name/></option>
+    </b:loop>
+  </select>
+</div>
+                </b:includable>
+      </b:widget>
+    </b:section>
+
+<!-- Entradas -->
+<b:section id='Blog'>
+  <b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+      <b:widget-setting name='authorLabel'>By</b:widget-setting>
+      <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='showAuthor'>true</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='timestampLabel'>a la/s</b:widget-setting>
+      <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='showLabels'>true</b:widget-setting>
+      <b:widget-setting name='showLocation'>true</b:widget-setting>
+      <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+      <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+      <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+      <b:widget-setting name='showReactions'>false</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='top'>
+
+      <b:if cond='data:view.isMultipleItems'>
+        <h2 class='title'>
+		<b:if cond='data:view.isHomepage'>
+          <b:elseif cond='data:view.isSearch and not data:view.isLabelSearch'/>
+          <b:elseif cond='data:view.isLabelSearch'/>
+			<data:view.search.label/>
+		</b:if>
+		</h2>
+<div class='table'>
+    <table id='table'>
+        <thead>
+            <tr>
+              <th style='min-width:8px'>#</th>
+              <th style='min-width:52px'>Fecha</th>
+              <th>Hora</th>
+              <th style='min-width:10px'>F</th>
+              <th style='min-width:15px'>Com</th>
+              <th>Titulo</th>
+              <th style='min-width:18px'>Live</th>
+              <th style='min-width:16px'>Std</th>
+            </tr>
+        </thead>
+        <tbody>
+         <b:loop values='data:posts' var='post'>
+            <b:include data='post' name='post'/><!-- insertamos entradas -->
+         </b:loop>
+        </tbody>
+    </table>
+</div>
+         <b:include name='nextprev'/>
+      <b:else/>
+         <b:loop values='data:posts' var='post'>
+            <b:include data='post' name='post'/><!-- insertamos entradas -->
+            <!-- insertamos Comentarios -->
+            <div class='comentarios'>
+               <b:if cond='!data:view.isPreview'>
+                  <b:if cond='data:post.allowComments'><!-- Si los comentarios estan permitidos -->
+                     <b:include data='post' name='comment-facebook'/><!-- elige entre facebook, disqus o blogger -->
+                  <b:else/><!-- Caso contrario -->
+                     <span class='info'>Esta entrada se encuentra cerrada y no permite comentarios</span>
+                  </b:if>
+               <b:else/>
+                  <span class='info'>Los comentarios no estan disponibles en la vista previa de la entrada</span>
+               </b:if>
+            </div>
+        <div class='' style='background: rgb(251, 247, 239);padding:1rem; text-align:center;'>
+Ver en vivo <data:post.title/>, Ver <data:post.title/> Online, Ver <data:post.title/> en vivo, Ver <data:post.title/> Sin limites Gratis.
+        </div>
+         </b:loop>
+      </b:if>
+
+      </b:includable>
+    <b:includable id='backlinkDeleteIcon' var='backlink'><!--none--></b:includable>
+    <b:includable id='backlinks' var='post'><!--none--></b:includable>
+    <b:includable id='comment-blogger' var='post'>
+      <h4><data:post.numComments/> Comentario<b:if cond='data:post.numComments &gt; 1 or data:post.numComments == 0'>s</b:if></h4>      
+      <div class='comments' id='comments'>
+         <div class='comments-content'>
+            <div id='comment-holder'><data:post.commentHtml/></div>
+            <b:include data='post' name='threaded_comment_js'/>
+         </div>
+         <div class='comment-footer'>
+            <b:if cond='data:post.allowNewComments'>
+               <b:include data='post' name='threaded-comment-form'/>
+            <b:else/>
+               <span class='info'>No se permiten nuevos comentarios</span>
+            </b:if>
+         </div>
+         </div>
+      </b:includable>
+    <b:includable id='comment-disqus'>
+         <div id='disqus_thread'/>
+         <script type='text/javascript'>
+         var disqus_shortname = &quot;[Shortname_DISQUS]&quot;;
+         var disqus_url = &quot;<data:blog.canonicalUrl/>&quot;; 
+         //<![CDATA[
+         (function() {
+               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+         //]]></script>
+         <noscript><span class='info'>T-T Lo sentimos, los comentarios requieren javascript</span></noscript>
+      </b:includable>
+    <b:includable id='comment-facebook'>
+         <div id='fb-root'/>
+         <script>//<![CDATA[
+            (function(d, s, id) {
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) return;
+               js = d.createElement(s); js.id = id;
+               js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
+               fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+         //]]></script>
+         <div class='fb-comments' data-numposts='10' data-width='100%' expr:data-href='data:blog.canonicalUrl'/>
+         <noscript><span class='info'>T-T Lo sentimos, los comentarios requieren javascript</span></noscript>
+      </b:includable>
+    <b:includable id='comment-form' var='post'><!--none--></b:includable>
+    <b:includable id='commentDeleteIcon' var='comment'><!--none--></b:includable>
+    <b:includable id='comment_count_picker' var='post'><!--none--></b:includable>
+    <b:includable id='comment_picker' var='post'><!--none--></b:includable>
+    <b:includable id='comments' var='post'><!--none--></b:includable>
+    <b:includable id='feedLinks'><!--none--></b:includable>
+    <b:includable id='feedLinksBody' var='links'><!--none--></b:includable>
+    <b:includable id='iframe_comments' var='post'><!--none--></b:includable>
+    <b:includable id='mobile-index-post' var='post'><!--none--></b:includable>
+    <b:includable id='mobile-main' var='top'><!--none--></b:includable>
+    <b:includable id='mobile-nextprev'><!--none--></b:includable>
+    <b:includable id='mobile-post' var='post'><!--none--></b:includable>
+    <b:includable id='nextprev'>
+         <div class='blog-pager' id='blog-pager'>
+            <b:if cond='data:newerPageUrl'><a class='newer-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'>Anterior</a></b:if>
+            <b:if cond='data:olderPageUrl'><a class='older-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'>Siguiente</a></b:if>
+         </div>
+      </b:includable>
+    <b:includable id='post' var='post'>
+       
+         <b:if cond='data:view.isMultipleItems'>
+
+                <tr>
+				  <td><b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;futbol&quot;,&quot;hockey&quot;,&quot;tenis&quot;,&quot;basquetbol&quot;,&quot;balonmano&quot;,&quot;voleibol&quot;,&quot;beisbol&quot;,&quot;rugby&quot;,&quot;boxeo&quot;,&quot;mma&quot;,&quot;moto&quot;,&quot;futbol-americano&quot;,&quot;voleibol-playa&quot;,&quot;futbol-playa&quot;,&quot;criquet&quot;,&quot;futsala&quot;,&quot;luchalibre&quot;,&quot;ufc&quot;]'>
+          <span expr:class='&quot;sport-icon &quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop></b:if></td>
+                  <td><b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;Hoy&quot;,&quot;Mañana&quot;,&quot;Proximamente&quot;,&quot;Finalizado&quot;,&quot;Repetición&quot;]'>
+          <data:label.name/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if></td>
+                  <td><b><data:post.timestamp/></b></td>
+                  <td>
+<!--Europa (Sur, Norte y Central)-->
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;albania&quot;,&quot;alemania&quot;,&quot;andorra&quot;,&quot;austria&quot;,&quot;bielorrusia&quot;,&quot;bulgaria&quot;,&quot;belgica&quot;,&quot;croacia&quot;,&quot;dinamarca&quot;,&quot;eslovaquia&quot;,&quot;eslovenia&quot;,&quot;españa&quot;,&quot;finlandia&quot;,&quot;francia&quot;,&quot;gibraltar&quot;,&quot;grecia&quot;,&quot;hungria&quot;,&quot;irlanda&quot;,&quot;islandia&quot;,&quot;italia&quot;,&quot;inglaterra&quot;,&quot;jersey&quot;,&quot;kosovo&quot;,&quot;luxemburgo&quot;,&quot;malta&quot;,&quot;moldavia&quot;,&quot;montenegro&quot;,&quot;monaco&quot;,&quot;noruega&quot;,&quot;holanda&quot;,&quot;polonia&quot;,&quot;portugal&quot;,&quot;reinounido&quot;,&quot;republicacheca&quot;,&quot;rumania&quot;,&quot;rusia&quot;,&quot;sanmarino&quot;]'>
+          <span expr:class='&quot;flag flag-&quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if>
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;serbia&quot;,&quot;suecia&quot;,&quot;suiza&quot;,&quot;ucrania&quot;,&quot;unioneuropea&quot;]'>
+          <span expr:class='&quot;flag flag-&quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if>
+<!--America (Sur, Norte y Central)-->
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;anguila&quot;,&quot;aruba&quot;,&quot;bahamas&quot;,&quot;barbados&quot;,&quot;belice&quot;,&quot;bermudas&quot;,&quot;bolivia&quot;,&quot;brasil&quot;,&quot;canada&quot;,&quot;chile&quot;,&quot;colombia&quot;,&quot;costarica&quot;,&quot;cuba&quot;,&quot;curazao&quot;,&quot;dominica&quot;,&quot;ecuador&quot;,&quot;elsalvador&quot;,&quot;estadosunidos&quot;,&quot;granada&quot;,&quot;groenlandia&quot;,&quot;guadalupe&quot;,&quot;guatemala&quot;,&quot;guayanafrancesa&quot;,&quot;guyana&quot;,&quot;haiti&quot;,&quot;honduras&quot;,&quot;jamaica&quot;,&quot;martinica&quot;,&quot;montserrat&quot;,&quot;mexico&quot;,&quot;nicaragua&quot;,&quot;panama&quot;,&quot;paraguay&quot;,&quot;peru&quot;,&quot;puertorico&quot;,&quot;republicadominicana&quot;,&quot;trinidadytobago&quot;]'>
+          <span expr:class='&quot;flag flag-&quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if>
+
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;uruguay&quot;,&quot;venezuela&quot;,&quot;argentina&quot;]'>
+          <span expr:class='&quot;flag flag-&quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if>
+<!---Asia (Sur, Norte y Central)-->
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;armenia&quot;,&quot;catar&quot;,&quot;china&quot;,&quot;coreadelnorte&quot;,&quot;coreadelsur&quot;,&quot;emiratosarabes&quot;,&quot;filipinas&quot;,&quot;georgia&quot;,&quot;hongkong&quot;,&quot;india&quot;,&quot;indonesia&quot;,&quot;irak&quot;,&quot;iran&quot;,&quot;israel&quot;,&quot;japon&quot;,&quot;jordania&quot;,&quot;kirguistan&quot;,&quot;kuwait&quot;,&quot;laos&quot;,&quot;libano&quot;,&quot;macao&quot;,&quot;malasia&quot;,&quot;mongolia&quot;,&quot;nepal&quot;,&quot;oman&quot;,&quot;pakistan&quot;,&quot;palestina&quot;,&quot;singapur&quot;,&quot;siria&quot;,&quot;tailandia&quot;,&quot;taiwan&quot;,&quot;tayikistan&quot;,&quot;turquia&quot;,&quot;uzbekistan&quot;,&quot;vietnam&quot;,&quot;yemen&quot;]'>
+          <span expr:class='&quot;flag flag-&quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if>
+<!---Oceania (Sur, Norte y Central)-->
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;australia&quot;,&quot;fiyi&quot;,&quot;islascook&quot;,&quot;kiribati&quot;,&quot;micronesia&quot;,&quot;nauru&quot;,&quot;nuevacaledonia&quot;,&quot;nuevazelanda&quot;,&quot;palaos&quot;,&quot;polinesiafrancesa&quot;,&quot;tokelau&quot;,&quot;tonga&quot;,&quot;tuvalu&quot;,&quot;vanuatu&quot;]'>
+          <span expr:class='&quot;flag flag-&quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if>
+<!---Africa (Sur, Norte y Central)-->
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;angola&quot;,&quot;argelia&quot;,&quot;benin&quot;,&quot;camerun&quot;,&quot;chad&quot;,&quot;comoras&quot;,&quot;costademarfil&quot;,&quot;egipto&quot;,&quot;eritrea&quot;,&quot;ghana&quot;,&quot;kenia&quot;,&quot;liberia&quot;,&quot;libia&quot;,&quot;madagascar&quot;,&quot;marruecos&quot;,&quot;mauricio&quot;,&quot;nigeria&quot;,&quot;niger&quot;,&quot;senegal&quot;,&quot;sudafrica&quot;]'>
+          <span expr:class='&quot;flag flag-&quot; + data:label.name' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if></td>
+                  <td style='width:15px;font-size:.61rem;line-height:12px;'><data:post.snippet/></td>
+                  <td><a class='titulo' expr:href='data:post.url'><data:post.title/></a></td>
+                  <td><a class='ver' expr:href='data:post.url'>ver</a></td>
+                  <td>
+<b:if cond='data:post.labels'>
+      <b:loop values='data:post.labels' var='label'>
+        <b:if cond='data:label.name in [&quot;live&quot;,&quot;nolive&quot;]'>
+          <span expr:class='data:label.name + &quot;-icon&quot;' expr:title='data:label.name'/>
+          <b:if cond='data:label.isLast != &quot;true&quot;'/>
+        </b:if>
+      </b:loop>
+                      </b:if></td>
+                </tr>
+
+         <!--{{ Pagina principal }}-->
+
+         <b:elseif cond='data:view.isPost'/>
+
+      <h1 class='title'><data:post.title/></h1>
+      <div class='infor'>si hay problema con la transmición reportalo en el <b>Chat Comunity</b></div>
+		<div class='content'>
+           <data:post.body/>
+		</div>
+
+        <div class='social'>
+			<b:include name='shareButtons'/>
+        </div>
+         <!--{{ Entradas }}-->
+
+         <b:elseif cond='data:view.isPage'/>
+
+         <!--{{ Pagina independiente }}-->
+      
+         </b:if>
+
+      </b:includable>
+    <b:includable id='postQuickEdit' var='post'><!--none--></b:includable>
+    <b:includable id='shareButtons'>
+		<div class='share clearfix'>
+            <a class='flex align-items-center icon-facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url'/>
+            <a class='flex align-items-center icon-twitter' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.url'/>
+            <a class='flex align-items-center icon-google' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url'/>
+            <a class='flex align-items-center icon-tumblr' expr:href='&quot;https://www.tumblr.com/share/photo?url=&quot; + data:post.firstImageUrl + &quot;&amp;caption=&quot; + data:post.url'/>
+            <a class='flex align-items-center icon-social-pinterest' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.firstImageUrl'/>
+		</div>
+</b:includable>
+    <b:includable id='status-message'><!--none--></b:includable>
+    <b:includable id='threaded-comment-form' var='post'>
+         <div class='comment-form'><a name='comment-form'/>
+            <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+               <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+            <data:post.cmtfpIframe/>
+            <script type='text/javascript'>BLOG_CMT_createIframe(&quot;<data:post.appRpcRelayPath/>&quot;);</script>
+         </div>
+      </b:includable>
+    <b:includable id='threaded_comment_js' var='post'>
+         <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+            <b:template-script inline='true' name='threaded_comments'/>
+            <script type='text/javascript'>blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>,<data:post.commentMsgs/>,<data:post.commentConfig/>);</script>
+         <script type='text/javascript'>//<![CDATA[
+var a=document.getElementsByClassName("avatar-image-container");for(i=0;i<a.length;i++)a[i].childNodes[0].setAttribute("src",a[i].childNodes[0].getAttribute("src").replace(/s\B\d{2,4}/,"s120-c"));
+//]]></script>
+      </b:includable>
+    <b:includable id='threaded_comments' var='post'><!--none--></b:includable>
+  </b:widget>
+</b:section>
+</div>
+      </div>
+
+    <div class='sidebar2'>
+  <b:section class='aside2' id='sidebar2'>
+    <b:widget id='HTML22' locked='false' title='Chat Comunity' type='HTML' version='1'>
+      <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<script id="cid0020000115595186169" data-cfasync="false" async="" src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 300px;">{"handle":"onlinesportzonechat","arch":"js","styles":{"a":"000000","b":100,"c":"0099ff","d":"0099ff","e":"000000","g":"ffffff","h":"000000","j":"ffffff","k":"0099ff","l":"202020","m":"000000","n":"ffffff","p":"9","q":"0099ff","r":100,"t":0,"usricon":0.78,"sbc":"0099ff","surl":0,"cnrs":"0.35"}}</script>]]></b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+    </b:widget>
+    <b:widget id='HTML3' locked='false' title='Entretenimiento' type='HTML' version='1'>
+      <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<img src="https://www.hotel-trapani.com/img/300x250.gif" / />]]></b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='publi widget-content flex justify-content-center align-items-center'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+    </b:widget>
+  </b:section>
+    </div>
+    </div>
+
+<footer>
+  <span>COPYRIGHT &#169; 2017 SPORTZONETV.NET &amp; SPORTZONETV.NET</span>
+  </footer>
+
+       <script type='text/javascript'>
+        //<![CDATA[
+          //!Autor: José Gregorio Materán | modificado: Daniel Abel
+        var h=document.querySelector(".share").children;i=0;for(t=h.length;i<t;i++)h[i].onclick=function(a){a.preventDefault();window.open(this.href,"btn-"+i,"width=800,height=400,left="+(screen.width/2-400)+",top="+(screen.height/2-200))};
+        //]]>
+        </script>
+<!-- Google Analytics -->
+<b:include data='blog' name='google-analytics'/>
+&lt;!--</body>--&gt;&lt;/body&gt;
+
+</html>
