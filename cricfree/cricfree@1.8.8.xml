@@ -290,7 +290,7 @@ header{
 }
 /*sidebar one*/
 .sidebar1{
-  width: 12%;
+  width: 15%;
 }
 .sidebar1 .widget h3{
   color: rgba(0, 0, 0, 0.61);
@@ -319,10 +319,9 @@ font-size: 1.34rem;
 }
 /*main style*/
 .main{
-  width: 58%;
+  width: 55%;
   margin:0 .7rem;
 }
-
 /*Global menu nivel*/
 
 .menu li ul {
@@ -2256,12 +2255,23 @@ Ver en vivo <data:post.title/>, Ver <data:post.title/> Online, Ver <data:post.ti
       </b:includable>
     <b:includable id='postQuickEdit' var='post'><!--none--></b:includable>
     <b:includable id='shareButtons'>
+
+
 		<div class='share clearfix'>
-            <a class='flex align-items-center icon-facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url'/>
+<div id='fb-root'/>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = &quot;//connect.facebook.net/es_LA/sdk.js#xfbml=1&amp;version=v2.10&quot;;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));</script>
+<div class='fb-like' data-action='like' data-layout='standard' data-share='true' data-show-faces='true' data-size='small' expr:data-href='data:post.url'/>
+            <!--<a class='flex align-items-center icon-facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url'/>
             <a class='flex align-items-center icon-twitter' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.url'/>
             <a class='flex align-items-center icon-google' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url'/>
             <a class='flex align-items-center icon-tumblr' expr:href='&quot;https://www.tumblr.com/share/photo?url=&quot; + data:post.firstImageUrl + &quot;&amp;caption=&quot; + data:post.url'/>
-            <a class='flex align-items-center icon-social-pinterest' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.firstImageUrl'/>
+            <a class='flex align-items-center icon-social-pinterest' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.firstImageUrl'/>-->
 		</div>
 </b:includable>
     <b:includable id='status-message'><!--none--></b:includable>
