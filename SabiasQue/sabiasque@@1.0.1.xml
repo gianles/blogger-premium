@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='1' b:layoutsVersion='2' b:responsive='true' b:version='2' lang='es' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<!-- Canvas.xml v1.3.60 | github.com/zkreations/canvas.xml -->
+<head>
+
+<!-- Datos generales -->
+<meta expr:charset='data:blog.encoding'/>
+<meta content='blogger' name='generator'/>
+<meta content='summary_large_image' name='twitter:card'/>
+<b:tag expr:content='data:view.isHomepage ? &quot;blog&quot; : &quot;article&quot;' name='meta' property='og:type'/>
+
+<!-- Responsive viewport -->
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+
+<!-- Datos personalizados del usuario -->
+<link href='https://plus.google.com/IDpaginaGoogle' rel='Publisher'/>
+<meta content='@blogger' name='twitter:site'/>
+<meta content='@google' name='twitter:creator'/>
+
+<!-- favicon -->
+<b:tag cond='data:blog.blogspotFaviconUrl' expr:href='data:blog.blogspotFaviconUrl' name='link' rel='icon' type='image/x-icon'/>
+
+<!-- Enlace Canonico -->
+<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+<meta expr:content='data:blog.canonicalUrl' name='twitter:url'/>
+<link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+
+<!-- Descripcion -->
+<b:if cond='data:blog.metaDescription'>
+   <meta expr:content='data:blog.metaDescription' property='og:description'/>
+   <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+   <meta expr:content='data:blog.metaDescription' name='description'/>
+<b:elseif cond='data:view.isSingleItem'/>
+   <meta expr:content='data:blog.pageName + &quot; : Leer el articulo completo.&quot;' name='twitter:description'/>
+</b:if>
+
+<!-- Meta Robots Relativo -->
+<b:with value='data:view.isHomepage or data:view.isSingleItem ? &quot;index,follow&quot; : &quot;noindex,nofollow&quot;' var='pagefollow'>
+   <meta expr:content='data:blog.isMobile ? &quot;noindex,noarchive&quot; : data:pagefollow' name='robots'/>
+   <b:if cond='data:pagefollow == &quot;index,follow&quot;'>
+      <meta content='noodp,noydir' name='robots'/>
+   </b:if>
+</b:with>
+
+<!-- Optimizando Posts -->
+<b:if cond='data:view.isPost and data:blog.postImageUrl'>
+   <link expr:href='data:blog.postImageUrl' rel='image_src'/>
+   <meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
+   <meta expr:content='data:blog.postImageUrl' property='og:image'/>
+</b:if>
+
+<!-- Optimizando Titulos -->
+<b:if cond='data:view.isError'>
+   <title>Error 404 en <data:blog.pageTitle/></title>
+<b:else/>
+   <b:with value='data:blog.pageName.length != 0 ? data:blog.pageName : data:blog.title' var='pageLength'>
+      <meta expr:content='data:pageLength' property='og:title'/>
+      <meta expr:content='data:pageLength' name='twitter:title'/>
+      <title><data:pageLength/></title>
+   </b:with>
+</b:if>
+
+<!-- feeds -->
+<b:tag cond='data:blog.feedLinks' expr:href='data:blog.canonicalHomepageUrl path &quot;feeds/posts/default&quot; ' expr:title='data:blog.title + &quot; - Atom&quot;' name='link' rel='alternate' type='application/atom+xml'/>
+<b:tag cond='data:blog.feedLinks' expr:href='data:blog.canonicalHomepageUrl path &quot;feeds/posts/default&quot; params {alt: &quot;rss&quot;}' expr:title='data:blog.title + &quot; - RSS&quot;' name='link' rel='alternate' type='application/rss+xml'/>
+
+<!-- schema ld+json -->
+<script type='application/ld+json'>
+{&quot;@context&quot;:&quot;http://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;<data:blog.title/>&quot;,&quot;url&quot;:&quot;<data:blog.homepageUrl/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:blog.homepageUrl/>search?q={search_term_string}&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}}
+</script>
+
+<!--[if lt IE 9]>
+   <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+<!-- Fin de datos-->
+
+<style type='text/css'>/*<![CDATA[*/
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}img,legend{max-width:100%}audio,canvas,img,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{padding:0;box-sizing:border-box}*,::after,::before,legend{box-sizing:border-box}a,table{background-color:transparent}.embed,sub,sup{position:relative}html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{-webkit-text-decoration-skip:objects;color:#2196f3;text-decoration:none}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none;vertical-align:middle}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}body{margin:0;font-family:"Helvetica Neue",arial,sans-serif;font-size:1rem;font-weight:400;overflow-x:hidden}a:focus,a:hover{color:#1565c0;text-decoration:underline}a:active,a:hover{outline-width:0}ol,ul{padding-left:2rem}ol,ol li,ul,ul li{margin:0;list-style:none}h1,h2,h3,h4,h5,h6{font-weight:500;margin:0}h2{font-size:1.5rem}h3{font-size:1.4rem}h4{font-size:1.3rem}h5{font-size:1.2rem}h6{font-size:1.1rem}table{border-spacing:0;border-collapse:collapse}[role=button],a,button,input,label,select,textarea{touch-action:manipulation}p{margin:0}.none{display:none!important}.no-style{background:none;padding:0;margin:0;border:0;outline:0;box-shadow:0 0 transparent;font:inherit}.center{display:block;margin-left:auto;margin-right:auto}.center-text{text-align:center}.clearfix::after{display:block;content:"";clear:both}.flex{display:-webkit-box;display:-ms-flexbox;display:flex}.wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.wrap-reverse{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse}.column{-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.column-reverse{-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.row,.row-reverse{-webkit-box-orient:horizontal}.row{-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.row-reverse{-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.order-first{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.order-last{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.no-order{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.justify-content-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.justify-content-end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.justify-content-start{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.justify-content-around{-ms-flex-pack:distribute;justify-content:space-around}.justify-content-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.align-content-center{-ms-flex-line-pack:center;align-content:center}.align-content-end{-ms-flex-line-pack:end;align-content:flex-end}.align-content-start{-ms-flex-line-pack:start;align-content:flex-start}.align-content-around{-ms-flex-line-pack:distribute;align-content:space-around}.align-content-between{-ms-flex-line-pack:justify;align-content:space-between}.align-content-stretch{-ms-flex-line-pack:stretch;align-content:stretch}.align-items-baseline{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}.align-items-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.align-items-end{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.align-items-start{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.align-items-stretch{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}.align-self-auto{-ms-flex-item-align:auto;-ms-grid-row-align:auto;align-self:auto}.align-self-baseline{-ms-flex-item-align:baseline;align-self:baseline}.align-self-center{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.align-self-end{-ms-flex-item-align:end;align-self:flex-end}.align-self-start{-ms-flex-item-align:start;align-self:flex-start}.align-self-stretch{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch}.button{display:inline-block;white-space:nowrap;font-weight:400;line-height:1.25;user-select:none;font-size:100%;padding:.6em 1em;text-decoration:none!important;color:rgba(0,0,0,.5);cursor:pointer;vertical-align:middle}embed,iframe,object{margin:0;padding:0;border:0;outline:0}.embed{padding-bottom:56.25%;height:0}.embed embed,.embed iframe,.embed object,.embed video{width:100%;height:100%;position:absolute;top:0;bottom:0;left:0}.table{display:block;width:100%;overflow-x:auto}.container{margin-right:auto;margin-left:auto;padding-left:1rem;padding-right:1rem}.drop-menu{font-size:0}.drop-menu,.drop-menu li,.drop-menu ul{padding:0;margin:0}.drop-menu li{position:relative}.drop-menu a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:1rem}.drop-menu ul{visibility:hidden;max-height:0}@media (max-width:991px){.drop-menu ul.is-open{visibility:visible;max-height:1280px}}@media (min-width:992px){.drop-menu>li{display:inline-block}.drop-menu ul{text-align:left;top:0;left:100%;position:absolute}.drop-menu>li>ul{top:100%;left:0}.drop-menu li:hover>ul{visibility:visible;max-height:1280px}.drop-menu ul .is-parent::after{transform:rotate(-45deg)}}.left{float:left}.right{float:right}
+/*]]>*/</style>
+
+<style type='text/css'>/*<![CDATA[*/
+/* => CSS Global */
+
+[class*=" icon-"]:before,[class^=icon-]:before,[data-icon]:before{font-family:Oliva!important;font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@font-face{font-family:Oliva;src:url(https://file.myfontastic.com/hGu3ZqMPpxjmVAjc7jrWgD/fonts/1501846430.eot);src:url(https://file.myfontastic.com/hGu3ZqMPpxjmVAjc7jrWgD/fonts/1501846430.eot?#iefix) format("embedded-opentype"),url(https://file.myfontastic.com/hGu3ZqMPpxjmVAjc7jrWgD/fonts/1501846430.woff) format("woff"),url(https://file.myfontastic.com/hGu3ZqMPpxjmVAjc7jrWgD/fonts/1501846430.ttf) format("truetype"),url(https://file.myfontastic.com/hGu3ZqMPpxjmVAjc7jrWgD/fonts/1501846430.svg#1501846430) format("svg");font-weight:400;font-style:normal}[data-icon]:before{content:attr(data-icon)}.icon-facebook-official:before{content:"\61"}.icon-facebook:before{content:"\62"}.icon-facebook-square:before{content:"\63"}.icon-github-2:before{content:"\64"}.icon-github:before{content:"\65"}.icon-tags:before{content:"\67"}.icon-tag:before{content:"\68"}.icon-twitter:before{content:"\69"}.icon-twitter-circled:before{content:"\6a"}.icon-twitter-1:before{content:"\6b"}.icon-home:before,.icon-Inicio:before{content:"\6c"}.icon-home-1:before{content:"\6d"}.icon-user:before{content:"\6e"}.icon-user-add:before{content:"\6f"}.icon-torsos:before{content:"\70"}.icon-google-plus-square:before{content:"\71"}.icon-google:before{content:"\72"}.icon-paint-brush:before{content:"\73"}.icon-pencil:before{content:"\74"}.icon-comment:before{content:"\78"}.icon-clock:before{content:"\79"}.icon-cloud-download:before{content:"\7a"}.icon-location:before{content:"\41"}.icon-comment-discussion:before{content:"\42"}.icon-clock-o:before{content:"\44"}.icon-heart:before{content:"\49"}.icon-mark-github:before{content:"\76"}.icon-octoface:before{content:"\77"}.icon-social-pinterest:before{content:"\4b"}.icon-social-github:before{content:"\4c"}.icon-tumblr:before{content:"\4d"}.icon-github-1:before{content:"\4a"}.icon-blogger:before{content:"\4e"}.icon-download:before,.icon-DESCARGAR:before,.icon-Descarga:before{content:"\66"}.icon-youtube:before,.icon-Videos:before{content:"\43"}.icon-popup:before{content:"\75"}.icon-donar:before{content:"\45"}.icon-campana:before{content:"\46"}.icon-chain-broken:before{content:"\47"}.icon-search:before{content:"\48"}.icon-eye:before{content:"\4f"}.icon-dollar:before{content:"\50"}.icon-dollar-bill:before{content:"\51"}.icon-link-external:before{content:"\52"}.icon-link:before{content:"\53"}.icon-book:before{content:"\54"}.icon-bookmark:before{content:"\55"}.icon-css3:before{content:"\56"}.icon-eye-1:before{content:"\57"}.icon-heartbeat:before{content:"\58"}.icon-history:before{content:"\59"}.icon-star:before{content:"\5a"}.icon-versions:before{content:"\30"}.icon-x:before{content:"\31"}.icon-tools:before{content:"\32"}.icon-zap:before{content:"\33"}.icon-like:before{content:"\34"}.icon-paypal:before{content:"\35"}.icon-baidu:before{content:"\36"}.icon-w3:before{content:"\37"}.icon-cog:before{content:"\38"}.icon-key:before{content:"\39"}.icon-btc:before{content:"\21"}.icon-diamond:before{content:"\22"}.icon-money:before,.icon-Ganar:before{content:"\23"}.icon-credit-card:before{content:"\24"}.icon-diamond-1:before{content:"\25"}.icon-gavel:before{content:"\26"}.icon-whatsapp:before{content:"\27"}.icon-flag:before{content:"\28"}.icon-folder-o:before{content:"\29"}.icon-folder-open-o:before{content:"\2a"}.icon-folder:before{content:"\2b"}.icon-folder-1:before{content:"\2c"}.icon-x-1:before{content:"\2d"}.icon-attention:before{content:"\2e"}.icon-dot-3:before{content:"\2f"}.icon-flickr:before{content:"\3a"}.icon-share:before{content:"\3b"}.icon-rss:before{content:"\3c"}.icon-instagrem:before{content:"\3d"}.icon-telephone:before{content:"\3e"}.icon-chrome:before{content:"\3f"}.icon-delicious:before{content:"\40"}.icon-cubes:before,.icon-APRENDE:before,.icon-Aprende:before{content:"\5b"}.icon-cube:before{content:"\5d"}.icon-book-1:before{content:"\5e"}.icon-dropbox:before{content:"\5f"}.icon-trophy:before{content:"\60"}.icon-bygian:before{content:"\7b"}.icon-clock-1:before{content:"\7c"}.icon-clock-2:before{content:"\7d"}.icon-clock-3:before{content:"\7e"}.icon-instagram:before{content:"\5c"}.icon-rocket:before,.icon-DESCUBRE:before,.icon-Descubre:before{content:"\e000"}.icon-social-yelp:before{content:"\e001"}.icon-left-dir:before{content:"\e002"}.icon-right-dir:before{content:"\e003"}.icon-right-open:before{content:"\e004"}.icon-left-open:before{content:"\e005"}.icon-down-open:before{content:"\e006"}.icon-up-open:before{content:"\e007"}.icon-hash:before{content:"\e008"}.icon-quote-left:before, .icon-CANCIONES:before{content:"\e009"}.icon-quote-right:before{content:"\e00a"}.icon-comment-quotes:before{content:"\e00b"}
+@font-face{font-family:RobotoDraft;font-style:normal;font-weight:400;src:local('RobotoDraft'),local('RobotoDraft-Regular'),url(https://fonts.gstatic.com/s/robotodraft/v1/0xES5Sl_v6oyT7dAKuoni4gp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2'),url(https://fonts.gstatic.com/s/robotodraft/v1/0xES5Sl_v6oyT7dAKuoni7rIa-7acMAeDBVuclsi6Gc.woff) format('woff')}
+@font-face{font-family:RobotoDraft;font-style:normal;font-weight:500;src:local('RobotoDraft Medium'),local('RobotoDraft-Medium'),url(https://fonts.gstatic.com/s/robotodraft/v1/u0_CMoUf3y3-4Ss4ci-VwXJuJo8UJJfpGKt7pXjBv4s.woff2) format('woff2'),url(https://fonts.gstatic.com/s/robotodraft/v1/u0_CMoUf3y3-4Ss4ci-VwaTA90I55Xt7owhZwpPnMsc.woff) format('woff')}
+@font-face{font-family:RobotoDraft;font-style:normal;font-weight:700;src:local('RobotoDraft Bold'),local('RobotoDraft-Bold'),url(https://fonts.gstatic.com/s/robotodraft/v1/u0_CMoUf3y3-4Ss4ci-Vwf79_ZuUxCigM2DespTnFaw.woff2) format('woff2'),url(https://fonts.gstatic.com/s/robotodraft/v1/u0_CMoUf3y3-4Ss4ci-VwRbnBKKEOwRKgsHDreGcocg.woff) format('woff')}
+/*end hack*/
+html {font-size: 14px;}
+body{/*start styles*/
+  background: url(https://previews.123rf.com/images/wonder33/wonder331209/wonder33120900001/15144487-M-rmol-gris-oscuro-abstracto-de-fondo-sin-fisuras-Foto-de-archivo.jpg) rgba(0, 0, 0, 0.09)/*color fondo*/;
+  font-family: RobotoDraft;
+}
+
+/*container*/
+.fondo{
+  background:rgba(255,255,255,0.3);
+}
+.container{
+  max-width: 1100px;
+  padding: 0;
+}
+/*header*/
+  header .logo{
+	background:rgba(255,255,255,0.3);
+	padding:2rem;
+}
+  header .logo span a{
+	font-size:2.5rem;
+	font-weight:700;
+	color:#fff;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+/*Drop menu*/
+.drop-menu{
+	background:rgba(0,0,0,0.5);
+	padding:1rem;
+}
+.drop-menu a{
+	color:#fff;
+	border-radius:3px;
+	padding:.6rem 1rem;
+	margin-right:.5rem;
+	display:inline-block;
+}
+.drop-menu a:hover{
+	color:#000;
+	background:#fff;
+}
+.drop-menu .here{
+	color:#000;
+	background:#fff;
+}
+  .main{margin:1rem;}
+
+  .card,article, .comentarios{background:rgb(255,255,255);margin-bottom:1rem;}
+  .card h2.title, article h1.title, .comentarios h4{border-bottom:1px solid rgba(0,0,0,0.11);padding:1rem;font-size:1.3rem;} 
+
+  .card h2.title a, article h1.title a{color:rgba(0,0,0,0.7);}
+  .card h2.title a:hover, article h1.title a:hover{color:rgba(0,0,0,0.9);}
+
+  .card h2::before,article h1::before, .comentarios h4::before{vertical-align:middle;position:relative;top:-1.2px;} 
+
+  .card .zona{padding:1rem;border-bottom:1px solid rgba(0,0,0,0.11);}
+  .card .data time{padding:1rem;}
+
+  .card .data time::before{vertical-align:middle;padding-right:.35rem;}
+  .card a.image{margin-right:1.5rem;overflow:hidden;height:auto;width:20%}
+
+  .card a.image img{width:100%}
+
+  .card p{position:relative;top:4rem;}
+  .card .read{border-left:1px solid rgba(0,0,0,0.12);padding:1rem;}
+  .main{padding:1rem;}
+
+ article .content, .comentarios .content{padding:1.3rem;top:9px;position:relative;}
+
+
+  footer{padding:1.9rem;text-align:center;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);}
+  footer span{color:#fff;font-size:1.6rem;}
+  footer p, footer a{color:#fff;font-size:1.2rem;}
+
+@media only screen and (max-width: 980px) {
+  .card p{position:relative;top:2rem;}
+}
+
+@media only screen and (max-width: 900px) {
+  .card p{position:relative;top:2rem;}
+  .card a.image{width:50%}
+
+  .main{margin:0;}
+}
+@media only screen and (max-width: 550px) {
+  .card p{position:relative;top:1rem;}
+
+.share a span{
+display:none;
+}
+.share a::before {
+	padding-right:0;
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+    .card a.image, .card p{float:none;width:100%; display:block}
+
+ .card .zona p{margin-bottom:1rem;}
+
+}
+
+/*Page-nav*/
+.blog-pager {
+	padding: 0 .6rem .6rem .6rem;
+    overflow:hidden;text-align:center;
+}
+
+.blog-pager a,.blog-pager a {
+    background: #fff;
+	display:inline-block;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-right: 10px;text-align:center;
+}
+
+.blog-pager a:hover,.blog-pager a:hover {
+    background: #343434;
+    color: #fff;
+}
+/**fix comment**/
+.comentarios {
+    position: relative;
+    z-index: 1;
+    overflow: initial;
+}
+.comments{margin-top:-1.4rem;}
+.comments .comments-content .loadmore.loaded{max-height:0;opacity:0;overflow:hidden;display:none;}
+
+.comments .comments-content .comment-thread ol{list-style-type:none;padding:0;text-align:left}
+
+.comments .comment-block{background-color:#f7f7f7;margin:0 0 0 100px;padding:20px 26px;color:#777;font-size:1rem;line-height:1.6;position:relative}
+
+.avatar-image-container{box-shadow:0 2px 2px -2px rgba(0,0,0,0.2),0 0 2px 0 rgba(0,0,0,0.1);float:left;height:80px;overflow:hidden;position:relative;width:80px;border-radius:4px;margin-top:1rem;background-origin:border-box;background-size:cover}
+
+.avatar-image-container > img{width:100%;}
+
+.comment-replies .avatar-image-container {
+    width: 38px;
+    height: 38px;
+    border-radius: 4px;
+}
+
+.continue,.item-control{display:none}
+
+.comments .comments-replybox{border:medium none;height:250px;width:100%}
+
+.comments .comment-replybox-single{margin-left:100px;margin-top:0}
+
+.comments .comment-replybox-thread, .comment-form {
+	max-height: 280px;
+}
+
+.comments .thread-chrome.thread-collapsed{display:none}
+
+.comment-header .user,.comment-header .user a{font-style:normal;font-weight:700;color:#555}
+
+.comment-header .user{margin-right:4px}
+
+.avatar-image-container img[src="https://img1.blogblog.com/img/anon36.png"],.avatar-image-container img[src="https://img2.blogblog.com/img/b36-rounded.png"]{opacity:0}
+li.comment {
+    position: relative;
+    margin: 0 0 1rem 0;
+}
+/**fin fix**/
+li.comment {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 1rem 0;
+    margin: 0;
+}
+.avatar-image-container {
+    width: 60px;
+    height: 60px;
+    margin: 5px 0 0;
+}
+.comments .comment-block {
+    margin-left: 80px;
+    background: none;
+    padding: 0;
+    font-size: 1rem;
+}
+.comment-content {
+    margin: 0;
+}
+.comment-header span.datetime {
+    font-size: .9em;
+}
+
+.comment-header span.datetime > a {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.thread-toggle {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    z-index: 40;
+}
+.deleted-comment {
+    padding: 1rem;
+    display: block;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
+    margin: .5rem 0;
+}
+.thread-toggle a {
+    text-indent: -9999px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center center;
+    opacity: 0.5;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAU0lEQVR4AWOgBxgFHPhEMIEXw2MGHRQRPaCIB24NGxn+M7wCakEofw0U2YDPQTugWhDKd4AcRUALUKEumnLCWtCUE9aCUE6kFphyorUA4SAGowAAbSweD6CmcT8AAAAASUVORK5CYII=');
+}
+
+.thread-toggle.thread-expanded a {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAARUlEQVR4AWMY1GAUNAAhScr/A2EDKcr/ACFcC2HlvxnCGMIhWohVDgQwLYSVh8K4hLU0AJWHQNkILXX47NDCIjIIwSgAAGEBHc5iOzTwAAAAAElFTkSuQmCC');
+}
+.thread-toggle a:hover {
+    opacity: 0.9;
+}
+.comment-replies li.comment {
+    border-bottom: 0 none;
+    margin-left: 5em;
+}
+.comment-replies .comment-block {
+    margin-left: 58px;
+}
+.comentarios .info {
+    margin: 1em 0;
+}
+.avatar-image-container { /* 2 */
+background-image: url(https://2.bp.blogspot.com/-FEtfrzjnhUI/WGa0Ype8HsI/AAAAAAAACC4/ajnTMZIbWuI9P-PP06LyaFGWNNw81I4_ACLcB/s1600/anon.png);
+}
+
+
+.share {
+    border-bottom:1px solid rgba(0,0,0,.09);padding:.9rem 1.2rem;
+}
+.share {
+    font-size: .99rem;
+}
+.share a {
+	border-radius:2px;
+	color: rgba(0,0,0,.6);
+    padding: 0.71rem 0.98rem;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    float: left;
+    -webkit-transition: opacity .2s, color .2s; 
+    transition: opacity .2s, color .2s;
+}
+.share a.icon-facebook {
+    background: #3C5A99;
+    color: #fff;
+}
+
+.share a.icon-facebook:hover {
+    color: #fff;
+}
+.share a::before {
+    display: block;
+	padding-right:.4rem;
+}
+
+.share a:hover,
+.share a:focus,
+.share a:active {
+    opacity: 0.9;
+    color: rgba(0,0,0,.8);
+	text-decoration:none;
+}
+/*]]>*/</style>
+
+<b:skin><![CDATA[
+/*!
+=> Theme Name: {{ NAME }}
+=> Theme URI: {{ URL }}
+=> Author: {{ AUTOR NAME }}
+=> Author URI: {{ AUTOR URL }}
+=> License: Creative Commons Atribucion-NoComercial 4.0 Internacional
+=> License URI: http://creativecommons.org/licenses/by-nc/4.0/
+*/
+/*Deleted: unnecessary elements*/
+.singleton-element:not(.cookie-choices-info),
+.item-control.blog-admin,
+.widget-item-control{display: none;}
+/*Fix: Blogger lightbox*/
+.CSS_LIGHTBOX{z-index: 90001 !important;}
+/*Fix: Comment Editor*/
+#comment-editor{border: 0;width: 100%;min-height: 220px;}
+/*Fix: fb responsive hack*/
+.fb-comments,.fb-comments iframe span[style],
+.fb-comments iframe[style],.fb-comments span,
+.fb-like-box,.fb-like-box iframe span[style],
+.fb-like-box iframe[style],.fb-like-box span{width:100%!important}
+/*Design: is Layout Mode*/
+body#layout .left{float: left;width: 50%;}
+body#layout .right{float: right;width: 50%;}
+]]></b:skin>
+
+</head>
+
+<body>
+
+<header class='container'>
+<div class='logo'>
+ <span><a class='icon-comment-discussion' expr:href='data:blog.homepageUrl'><data:blog.title/></a></span>
+</div>
+
+<!--<div class='drop-menu'>
+<nav>
+  <a class='here' href='#'>Home</a>
+  <a href='#'>Elemento A</a>
+  <a href='#'>Elemento B</a>
+  <a href='#'>Elemento C</a>
+  <a href='#'>Elemento D</a>
+  </nav>
+  </div>-->
+  </header>
+
+<div class='fondo container'>
+<div style="padding:0 1.4rem;">
+<script src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='2829577396' style='display:block; text-align:center;'/>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+  <div class='main'>
+<!-- Entradas -->
+<b:section id='Blog'>
+  <b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+      <b:widget-setting name='authorLabel'>By</b:widget-setting>
+      <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='showAuthor'>false</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='showLabels'>true</b:widget-setting>
+      <b:widget-setting name='showLocation'>true</b:widget-setting>
+      <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+      <b:widget-setting name='postsPerAd'>2</b:widget-setting>
+      <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='showInlineAds'>true</b:widget-setting>
+      <b:widget-setting name='showReactions'>false</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='top'>
+
+   <b:if cond='data:view.isMultipleItems'>
+      <b:loop values='data:posts' var='post'>
+         <b:include data='post' name='post'/><!-- insertamos entradas -->
+      </b:loop>
+      <b:include name='nextprev'/>
+   <b:else/>
+      <b:loop values='data:posts' var='post'>
+         <b:include data='post' name='post'/><!-- insertamos entradas -->
+
+<script async='' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='2829577396' style='display:block; text-align:center;margin-bottom:1rem;'/>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+                      </script>
+
+         <!-- insertamos comentarios --><div class='comentarios'>
+        <h4>Comparte esta curiosidad!</h4>
+        <b:include name='shareButtons'/>
+        </div> </b:loop>
+   </b:if>
+
+   </b:includable>
+    <b:includable id='backlinkDeleteIcon' var='backlink'><!--none--></b:includable>
+    <b:includable id='backlinks' var='post'><!--none--></b:includable>
+    <b:includable id='comment-blogger' var='post'>
+      <h4><data:post.numComments/> Comentario<b:if cond='data:post.numComments neq 1'>s</b:if></h4> <div class='content'>
+      <div class='comments' id='comments'>
+         <div class='comments-content'>
+            <div id='comment-holder'><data:post.commentHtml/></div>
+            <b:include data='post' name='threaded_comment_js'/>
+         </div>
+         <b:include data='post' expr:name='data:post.allowNewComments ? &quot;threaded-comment-form&quot; : &quot;comment_status&quot;'/>
+      </div></div>
+   </b:includable>
+    <b:includable id='comment-disqus'>
+      <div id='disqus_thread'/>
+      <script type='text/javascript'>
+         var disqus_url = &quot;<data:blog.canonicalUrl/>&quot;,
+         disqus_shortname = &quot;<b:eval expr='data:commentsType[1]'/>&quot;;//<![CDATA[
+         (function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();//]]>
+      </script>
+   </b:includable>
+    <b:includable id='comment-facebook'>
+      <div class='fb-comments' expr:data-href='data:blog.canonicalUrl' expr:data-numposts='data:commentsType[2]'/>
+   </b:includable>
+    <b:includable id='comment-form' var='post'><!--none--></b:includable>
+    <b:includable id='commentDeleteIcon' var='comment'><!--none--></b:includable>
+    <b:includable id='comment_count_picker' var='post'><!--none--></b:includable>
+    <b:includable id='comment_picker' var='post'><!--none--></b:includable>
+    <b:includable id='comment_status'>
+      <p class='info'><b:eval expr='data:view.isPreview ? &quot;No disponible&quot; : &quot;No se permiten nuevos comentarios&quot;'/></p>
+   </b:includable>
+    <b:includable id='comments' var='post'><!--none--></b:includable>
+    <b:includable id='feedLinks'><!--none--></b:includable>
+    <b:includable id='feedLinksBody' var='links'><!--none--></b:includable>
+    <b:includable id='iframe_comments' var='post'><!--none--></b:includable>
+    <b:includable id='mobile-index-post' var='post'><!--none--></b:includable>
+    <b:includable id='mobile-main' var='top'><!--none--></b:includable>
+    <b:includable id='mobile-nextprev'><!--none--></b:includable>
+    <b:includable id='mobile-post' var='post'><!--none--></b:includable>
+    <b:includable id='nextprev'>
+      <div class='blog-pager' id='blog-pager'>
+         <b:if cond='data:newerPageUrl'><a class='newer-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'>Anterior</a></b:if>
+         <b:if cond='data:olderPageUrl'><a class='older-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'>Ver mas</a></b:if>
+      </div>
+
+<div style="padding:.8rem 0 0 0;">
+<script src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='2829577396' style='display:block; text-align:center;height:90px;'/>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+   </b:includable>
+    <b:includable id='post' var='post'>
+    
+      <b:if cond='data:view.isMultipleItems'>
+
+					<b:if cond='data:post.isFirstPost'>
+
+      <div class='card clearfix'>
+
+        <h2 class='title clearfix icon-bookmark'><a expr:href='data:post.url'><data:post.title/></a></h2>
+
+			<div class='zona clearfix'>
+                <a class='image left clearfix' expr:href='data:post.url'>
+                <b:if cond='data:post.thumbnailUrl'>
+                                    <img expr:alt='data:post.title' expr:src='resizeImage(data:post.thumbnailUrl,260,)'/>
+                                <b:else/>
+                                    <b:if cond='data:post.firstImageUrl'>
+                                        <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl' expr:title='data:post.title'/>
+                                    <b:else/>				
+                                        <img expr:alt='data:post.title' expr:title='data:post.title' src='https://4.bp.blogspot.com/-S82veBwr6GY/WGXba_QzE1I/AAAAAAAACBI/jV5d4YA4iTEbo8xZiZ6l4D8Fcw9ecMVrgCLcB/s350-c/no-image-blogger.png'/>
+                                    </b:if>
+                                </b:if>
+                </a>
+
+                <p class=''><data:post.snippet/></p>
+			</div>
+
+        <div class='data clearfix'>
+          <time class='left icon-clock-1'><data:post.timestamp/></time>
+
+          <a class='read right icon-pencil' expr:href='data:post.url'>Leer mas</a>
+		</div>
+
+      </div>
+
+
+<script async='' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='2829577396' style='display:block; text-align:center;'/>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+                      </script>
+<div style="margin-bottom:1rem;"/>
+
+                      <b:else/>
+
+      <div class='card clearfix'>
+
+        <h2 class='title clearfix icon-bookmark'><a expr:href='data:post.url'><data:post.title/></a></h2>
+
+			<div class='zona clearfix'>
+                <a class='image left clearfix' expr:href='data:post.url'>
+                <b:if cond='data:post.thumbnailUrl'>
+                                    <img expr:alt='data:post.title' expr:src='resizeImage(data:post.thumbnailUrl,260,)'/>
+                                <b:else/>
+                                    <b:if cond='data:post.firstImageUrl'>
+                                        <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl' expr:title='data:post.title'/>
+                                    <b:else/>				
+                                        <img expr:alt='data:post.title' expr:title='data:post.title' src='https://4.bp.blogspot.com/-S82veBwr6GY/WGXba_QzE1I/AAAAAAAACBI/jV5d4YA4iTEbo8xZiZ6l4D8Fcw9ecMVrgCLcB/s350-c/no-image-blogger.png'/>
+                                    </b:if>
+                                </b:if>
+                </a>
+
+                <p class=''><data:post.snippet/></p>
+			</div>
+
+        <div class='data clearfix'>
+          <time class='left icon-clock-1'><data:post.timestamp/></time>
+
+          <a class='read right icon-pencil' expr:href='data:post.url'>Leer mas</a>
+		</div>
+
+      </div>
+					</b:if>
+      <!--{{ Pagina principal }}-->
+
+      <b:elseif cond='data:view.isPost'/>
+
+     <article class='clearfix'>
+
+       <h1 class='title clearfix icon-bookmark'><a expr:href='data:post.url'><data:post.title/></a></h1>
+
+
+<div class='content'>
+
+<div expr:id='"aim1" + data:post.id'></div>
+
+<div style="clear:both; margin:10px 0">
+<script async='' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='2829577396' style='display:block; text-align:center;margin-bottom:1rem;'/>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+                      </script>
+</div>
+
+<div expr:id='"aim2" + data:post.id'>
+<data:post.body/>
+</div>
+
+<script type="text/javascript">
+var obj0=document.getElementById("aim1<data:post.id/>");
+var obj1=document.getElementById("aim2<data:post.id/>");
+var s=obj1.innerHTML;
+var r=s.search(/\x3C!-- adsense --\x3E/igm);
+if(r>0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);}
+</script>
+       </div>
+
+			</article>
+
+      <!--{{ Entradas }}-->
+
+      <b:elseif cond='data:view.isPage'/>
+
+      <!--{{ Pagina independiente }}-->
+   
+      </b:if>
+
+   </b:includable>
+    <b:includable id='postQuickEdit' var='post'><!--none--></b:includable>
+    <b:includable id='shareButtons'>
+		<div class='share clearfix'>
+            <a class='flex align-items-center icon-facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url'> <span>compartir</span></a>
+            <a class='flex align-items-center icon-twitter' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.url'> <span>twitter</span></a>
+            <a class='flex align-items-center icon-google' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url'> <span>google+</span></a>
+            <a class='flex align-items-center icon-tumblr' expr:href='&quot;https://www.tumblr.com/share/photo?url=&quot; + data:post.firstImageUrl + &quot;&amp;caption=&quot; + data:post.url'> <span>tumblr</span></a>
+            <a class='flex align-items-center icon-social-pinterest' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.firstImageUrl'> <span>pinterest</span></a>
+		</div>
+		</b:includable>
+    <b:includable id='status-message'><!--none--></b:includable>
+    <b:includable id='threaded-comment-form' var='post'>
+      <div class='comment-form'><a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+         <iframe class='blogger-iframe-colorize blogger-comment-from-post' id='comment-editor' src=''/>
+         <data:post.cmtfpIframe/><script type='text/javascript'>BLOG_CMT_createIframe(&quot;<data:post.appRpcRelayPath/>&quot;);</script>
+      </div>
+   </b:includable>
+    <b:includable id='threaded_comment_js' var='post'>
+      <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/><b:template-script inline='true' name='threaded_comments'/>
+      <script type='text/javascript'>blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>,<data:post.commentMsgs/>,<data:post.commentConfig/>);/*<![CDATA[*/var a=document.getElementsByClassName("avatar-image-container");for(i=0;i<a.length;i++)a[i].childNodes[0].setAttribute("src",a[i].childNodes[0].getAttribute("src").replace(/s\B\d{2,4}/,"s120-c"));//]]></script>
+   </b:includable>
+    <b:includable id='threaded_comments' var='post'><!--none--></b:includable>
+  </b:widget>
+</b:section>
+  </div>
+
+<footer>
+<span>
+  @2017 <data:blog.title/>
+  </span>
+
+<p>
+  Desing by <a href="http://www.bygian.com/" target="_blanck">ByGian</a>
+  </p>
+  </footer>
+
+ </div>
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<script type='text/javascript'>
+//<![CDATA[
+  //!Autor: José Gregorio Materán | modificado: Daniel Abel
+var h=document.querySelector(".share").children;i=0;for(t=h.length;i<t;i++)h[i].onclick=function(a){a.preventDefault();window.open(this.href,"btn-"+i,"width=800,height=400,left="+(screen.width/2-400)+",top="+(screen.height/2-200))};
+//]]>
+</script>
+</b:if>
+
+<!-- Google Analytics -->
+<b:include data='blog' name='google-analytics'/>
+</body>
+</html>
