@@ -1808,7 +1808,7 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
            <h1 class='title'><data:post.title/></h1>
         <b:include name='shareButtons'/>
 			<div class='author'>
-              <p class='icon-clock-2'><data:post.timestamp/></p> <p class='icon-user-add'>By <a expr:href='data:post.authorProfileUrl'><data:post.author/></a></p> <p class='icon-comment'><data:post.numComments/> comentario</p><p style='position:relative;top:3px;'><a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/YouTutosJeff'>Follow @YouTutosJeff</a><script async='' charset='utf-8' src='//platform.twitter.com/widgets.js'/></p> 
+              <p class='icon-clock-2'><data:post.timestamp/></p> <p class='icon-user-add'>By <a expr:href='data:post.authorProfileUrl'><data:post.author/></a></p> <p class='icon-comment'><data:post.numComments/> comentario</p><p> <div class='fb-like' data-action='like' data-href='https://www.facebook.com/yoututosjeff' data-layout='button' data-share='false' data-show-faces='false' data-size='small'/></p><p style='position:relative;top:3px;'><a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/YouTutosJeff'>Follow @YouTutosJeff</a><script async='' charset='utf-8' src='//platform.twitter.com/widgets.js'/></p> 
             </div>
 <div class='clearfix' style='padding:1rem 1rem .3rem 1rem;'>
 <div class='publi left clearfix' style='width:50%'>
