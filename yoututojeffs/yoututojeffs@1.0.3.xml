@@ -1894,8 +1894,8 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
 <b:if cond='data:post.thumbnailUrl'><img expr:alt='data:post.title' expr:src='resizeImage(data:post.thumbnailUrl,760,&quot;16:9&quot;)'/></b:if>
 
 
-           <div class='generos'>
-			                 <b:loop values='data:post.labels' var='label'>
+           <div class='generos'><a expr:href='data:blog.url'>INICIO</a><i class='icon-right-open'/>
+              				<b:loop values='data:post.labels limit 3' var='label'>
             					<a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='not data:label.isLast'><i class='icon-right-open'/></b:if>
                             </b:loop>
             </div>
@@ -1914,12 +1914,19 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
             </div>
 <div class='clearfix' style='padding:1rem 1rem .3rem 1rem;'>
 <div class='publi left clearfix' style='width:50%'>
+
+<!-- INICIO - Publicidad dentro de las entradas-->
+
 <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
 <!-- Android 2017 -->
 <ins class='adsbygoogle' data-ad-client='ca-pub-5377790555296701' data-ad-format='auto' data-ad-slot='2007607076' style='display:block'/>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script></div>
+</script>
+
+<!-- FIN - Publicidad dentro de las entradas-->
+
+</div>
 
 <div class='rela right' style='padding:1rem;'>
   <p style='background:rgba(0,0,0,0.14);padding:1rem;width:100%;font-size:1.1rem;'><data:blog.metaDescription/>.</p>
@@ -1999,7 +2006,7 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
       </b:includable>
     <b:includable id='threaded_comments' var='post'><!--none--></b:includable>
   </b:widget>
-  <b:widget id='HTML6' locked='false' title='' type='HTML' version='1'>
+  <b:widget id='HTML6' locked='false' title='publicidad 4' type='HTML' version='1'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;!-- yoututosjeffofficial_header-wide_AdSense4_1x1_as --&gt;
 &lt;ins class=&quot;adsbygoogle&quot;
@@ -2221,9 +2228,7 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
      data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
 &lt;script&gt;
 (adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-
-&lt;script&gt;(function(w,u){var d=w.document,z=typeof u;function g207(){function c(c,i){var e=d.createElement(&#39;i&#39;),b=d.body,s=b.style,l=b.childNodes.length;if(typeof i!=z){e.setAttribute(&#39;id&#39;,i);s.margin=s.padding=0;s.height=&#39;100%&#39;;l=Math.floor(Math.random()*l)+1}e.innerHTML=c;b.insertBefore(e,b.childNodes[l-1])}function g(i,t){return !t?d.getElementById(i):d.getElementsByTagName(t)};function f(v){if(!g(&#39;g207&#39;)){c(&#39;&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/S7qZDNG.png&quot;&gt;&lt;br/&gt;-Hasta que no desactives Ad Block, no podrás ver el contenido!&lt;br/&gt;-Está página se sostiene gracias a la publicidad!&lt;br/&gt;-Por favor desactiva Ad Block para apoyarnos!&lt;br/&gt;-Please disable your ad blocker!&lt;br/&gt;-This site is supported by the advertisement! &lt;br/&gt;-Please disable your ad blocker to support us! &lt;/p&gt;&#39;,&#39;g207&#39;)}};(function(){var a=[&#39;Adrectangle&#39;,&#39;PageLeaderAd&#39;,&#39;ad-column&#39;,&#39;advertising2&#39;,&#39;divAdBox&#39;,&#39;mochila-column-right-ad-300x250-1&#39;,&#39;searchAdSenseBox&#39;,&#39;ad&#39;,&#39;ads&#39;,&#39;adsense&#39;],l=a.length,i,s=&#39;&#39;,e;for(i=0;i&lt;l;i++){if(!g(a[i])){s+=&#39;&lt;a id=&quot;&#39;+a[i]+&#39;&quot;&gt;&lt;/a&gt;&#39;}}c(s);l=a.length;for(i=0;i&lt;l;i++){e=g(a[i]);if(e.offsetParent==null||(w.getComputedStyle?d.defaultView.getComputedStyle(e,null).getPropertyValue(&#39;display&#39;):e.currentStyle.display)==&#39;none&#39;){return f(&#39;#&#39;+a[i])}}}());(function(){var t=g(0,&#39;img&#39;),a=[&#39;/adaffiliate_&#39;,&#39;/adops/ad&#39;,&#39;/adsales/ad&#39;,&#39;/adsby.&#39;,&#39;/adtest.&#39;,&#39;/ajax/ads/ad&#39;,&#39;/controller/ads/ad&#39;,&#39;/pageads/ad&#39;,&#39;/weather/ads/ad&#39;,&#39;-728x90-&#39;],i;if(typeof t[0]!=z&amp;&amp;typeof t[0].src!=z){i=new Image();i.onload=function(){this.onload=z;this.onerror=function(){f(this.src)};this.src=t[0].src+&#39;#&#39;+a.join(&#39;&#39;)};i.src=t[0].src}}());(function(){var o={&#39;http://pagead2.googlesyndication.com/pagead/show_ads.js&#39;:&#39;google_ad_client&#39;,&#39;http://js.adscale.de/getads.js&#39;:&#39;adscale_slot_id&#39;,&#39;http://get.mirando.de/mirando.js&#39;:&#39;adPlaceId&#39;},S=g(0,&#39;script&#39;),l=S.length-1,n,r,i,v,s;d.write=null;for(i=l;i&gt;=0;--i){s=S[i];if(typeof o[s.src]!=z){n=d.createElement(&#39;script&#39;);n.type=&#39;text/javascript&#39;;n.src=s.src;v=o[s.src];w[v]=u;r=S[0];n.onload=n.onreadystatechange=function(){if(typeof w[v]==z&amp;&amp;(!this.readyState||this.readyState===&quot;loaded&quot;||this.readyState===&quot;complete&quot;)){n.onload=n.onreadystatechange=null;r.parentNode.removeChild(n);w[v]=null}};r.parentNode.insertBefore(n,r);setTimeout(function(){if(w[v]!==null){f(n.src)}},2000);break}}}())}if(d.addEventListener){w.addEventListener(&#39;load&#39;,g207,false)}else{w.attachEvent(&#39;onload&#39;,g207)}})(window);&lt;/script&gt;</b:widget-setting>
+&lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
