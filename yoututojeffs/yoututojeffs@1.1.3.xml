@@ -1788,7 +1788,7 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
 
            <div class='generos'><a expr:href='data:blog.url'>INICIO</a><i class='icon-right-open'/>
               				<b:loop values='data:post.labels limit 3' var='label'>
-            					<a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='not data:label.isLast'><i class='icon-right-open'/></b:if>
+            					<a expr:href='data:label.url + &quot;?&amp;max-results=16&quot;' rel='tag'><data:label.name/></a><b:if cond='not data:label.isLast'><i class='icon-right-open'/></b:if>
                             </b:loop>
             </div>
 <div id='fb-root'/>
