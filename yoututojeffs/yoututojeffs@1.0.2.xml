@@ -1862,7 +1862,7 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
 		<div class='tags'>
               <!-- Condicion Lambda -->
 
-              <b:loop values='data:post.labels first (tag =&gt; tag.name in {&quot;DESCARGAR&quot;,&quot;APRENDE&quot;,&quot;CANCIONES&quot;,&quot;DESCUBRE&quot;})' var='label'>
+              <b:loop values='data:post.labels limit 1' var='label'>
                  <span expr:class='&quot;icon-&quot; + data:label.name'><data:label.name/></span>
               </b:loop>
           </div>
@@ -1899,18 +1899,18 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
             					<a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='not data:label.isLast'><i class='icon-right-open'/></b:if>
                             </b:loop>
             </div>
-<div id="fb-root"></div>
+<div id='fb-root'/>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&amp;version=v2.10";
+  js.src = &quot;//connect.facebook.net/es_LA/sdk.js#xfbml=1&amp;version=v2.10&quot;;
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));</script>
            <h1 class='title'><data:post.title/></h1>
         <b:include name='shareButtons'/>
 			<div class='author'>
-              <p class='icon-clock-2'><data:post.timestamp/></p> <p class='icon-user-add'>By <a expr:href='data:post.authorProfileUrl'><data:post.author/></a></p> <p class='icon-comment'><data:post.numComments/> comentario</p><p> <div class="fb-like" data-href="https://www.facebook.com/yoututosjeff" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div></p><p style='position:relative;top:3px;'><a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/YouTutosJeff'>Follow @YouTutosJeff</a><script async='' charset='utf-8' src='//platform.twitter.com/widgets.js'/></p> 
+              <p class='icon-clock-2'><data:post.timestamp/></p> <p class='icon-user-add'>By <a expr:href='data:post.authorProfileUrl'><data:post.author/></a></p> <p class='icon-comment'><data:post.numComments/> comentario</p><p> <div class='fb-like' data-action='like' data-href='https://www.facebook.com/yoututosjeff' data-layout='button' data-share='false' data-show-faces='false' data-size='small'/></p><p style='position:relative;top:3px;'><a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/YouTutosJeff'>Follow @YouTutosJeff</a><script async='' charset='utf-8' src='//platform.twitter.com/widgets.js'/></p> 
             </div>
 <div class='clearfix' style='padding:1rem 1rem .3rem 1rem;'>
 <div class='publi left clearfix' style='width:50%'>
