@@ -1487,7 +1487,7 @@ var relacionados={posts:[],max:6,maxLen:100,imgPorDefecto:"https://3.bp.blogspot
 <b:section class='main-menu' id='Menú' maxwidgets='1' showaddelement='no'>
    <b:widget id='PageList1' locked='true' title='Páginas' type='PageList' version='1'>
      <b:widget-settings>
-       <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://youtubejeff-redesing.blogspot.com/', 'title': 'Inicio', 'position': 0}, 'link0': {'href': '/search/label/DESCUBRE', 'title': 'Descubre', 'position': 1}, 'link1': {'href': '/search/label/APRENDE', 'title': 'Aprende', 'position': 2}, 'link2': {'href': '/search/label/DESCARGAR', 'title': 'Descarga', 'position': 3}, 'link3': {'href': '/search/label/VIDEOS%20INFORMATIVOS', 'title': 'Videos Informativos', 'position': 4}, 'link4': {'href': '/search/label/GANAR%20DINERO', 'title': 'Ganar Dinero', 'position': 5}}]]></b:widget-setting>
+       <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://tauder-demo.blogspot.com/', 'title': 'Inicio', 'position': 0}, 'link0': {'href': '/search/label/DESCUBRE?\x26max-results\x3d16', 'title': 'Descubre', 'position': 1}, 'link1': {'href': '/search/label/APRENDE?\x26max-results\x3d16', 'title': 'Aprende', 'position': 2}, 'link2': {'href': '/search/label/DESCARGAR?\x26max-results\x3d16', 'title': 'Descarga', 'position': 3}, 'link3': {'href': '/search/label/VIDEOS%20INFORMATIVOS?\x26max-results\x3d16', 'title': 'Videos Informativos', 'position': 4}, 'link4': {'href': '/search/label/GANAR%20DINERO?\x26max-results\x3d16', 'title': 'Ganar Dinero', 'position': 5}}]]></b:widget-setting>
        <b:widget-setting name='homeTitle'>Inicio</b:widget-setting>
      </b:widget-settings>
      <b:includable id='main'>
@@ -1504,11 +1504,11 @@ var relacionados={posts:[],max:6,maxLen:100,imgPorDefecto:"https://3.bp.blogspot
         <div class='fogeteo'><a class='dropo icon-popup' href='#'>Más</a> 
           <nav class='morelist' id='list'>
           <a class='icon-facebook' href='https://www.facebook.com/groups/youtuberscompartiendocontenido/'>Youtubers Compartiendo contenido</a>
-          <a class='icon-quote-left' href='http://www.yoututosjeff.es/search/label/MUSICA%20DEL%20MES'>Musica del mes</a>
+          <a class='icon-quote-left' href='/search/label/MUSICA%20DEL%20MES?&amp;max-results=16'>Musica del mes</a>
           <a class='icon-right-dir' href='https://www.youtube.com/channel/UCd8MM7JjP_O6tOf_u4bz_gQ'>Musica Sin Copyright</a>
           <a class='icon-instagram' href='https://www.facebook.com/youwallpapersjeff/timeline'>Wallpapers FULL HD</a>
-          <a class='icon-folder-1' href='/search/label/PACKS'>PACKS</a>
-          <a class='icon-flag' href='http://www.yoututosjeff.es/search/label/Primeras%20impresiones'>Primeras Impresiones</a>
+          <a class='icon-folder-1' href='/search/label/PACKS?&amp;max-results=16'>PACKS</a>
+          <a class='icon-flag' href='/search/label/Primeras%20impresiones?&amp;max-results=16'>Primeras Impresiones</a>
           </nav>   
         </div>
     			</nav>
@@ -1538,13 +1538,7 @@ var relacionados={posts:[],max:6,maxLen:100,imgPorDefecto:"https://3.bp.blogspot
 
     <!-- INICIO - Publicidad superior -->
 
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5377790555296701"
-     data-ad-host="ca-host-pub-1556223355139109"
-     data-ad-host-channel="L0002"
-     data-ad-slot="2147207873"
-     data-ad-format="auto"></ins>
+<ins class='adsbygoogle' data-ad-client='ca-pub-5377790555296701' data-ad-format='auto' data-ad-host='ca-host-pub-1556223355139109' data-ad-host-channel='L0002' data-ad-slot='2147207873' style='display:block'/>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -1919,10 +1913,6 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
 &lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
   <div class='widget-content' style='padding:1rem 0;'>
     <data:content/>
   </div>
@@ -2048,7 +2038,7 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
                   <b:if cond='data:blog.url == data:label.url'>
                       <a class='here' expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/> <span dir='ltr'><data:label.count/></span></a>
                   <b:else/>
-                      <a expr:class='&quot;icon-&quot; + data:label.name' expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+                      <a expr:class='&quot;icon-&quot; + data:label.name' expr:dir='data:blog.languageDirection' expr:href='data:label.url + &quot;?&amp;max-results=16&quot;'><data:label.name/></a>
                   </b:if>
               </b:loop>
            </div>
@@ -2224,14 +2214,15 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
 </footer>
 <div class='header2 container'>
         <b:section id='footer-social' maxwidgets='1' showaddelement='no'>
-          <b:widget id='PageList11' locked='true' title='Páginas' type='PageList' version='1'>
-            <b:widget-settings>
-              <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://youtubejeff-redesing.blogspot.com/', 'title': 'Inicio', 'position': 0}, 'link0': {'href': '/search/label/DESCUBRE', 'title': 'Descubre', 'position': 1}, 'link1': {'href': '/search/label/APRENDE', 'title': 'Aprende', 'position': 2}, 'link2': {'href': '/search/label/DESCARGAR', 'title': 'Descarga', 'position': 3}, 'link3': {'href': '/search/label/VIDEOS%20INFORMATIVOS', 'title': 'Videos Informativos', 'position': 4}, 'link4': {'href': '/search/label/GANAR%20DINERO', 'title': 'Ganar Dinero', 'position': 5}}]]></b:widget-setting>
-              <b:widget-setting name='homeTitle'>Inicio</b:widget-setting>
-            </b:widget-settings>
-            <b:includable id='main'>
+
+   <b:widget id='PageList11' locked='true' title='Páginas' type='PageList' version='1'>
+     <b:widget-settings>
+       <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://tauder-demo.blogspot.com/', 'title': 'Inicio', 'position': 0}, 'link0': {'href': '/search/label/DESCUBRE?\x26max-results\x3d16', 'title': 'Descubre', 'position': 1}, 'link1': {'href': '/search/label/APRENDE?\x26max-results\x3d16', 'title': 'Aprende', 'position': 2}, 'link2': {'href': '/search/label/DESCARGAR?\x26max-results\x3d16', 'title': 'Descarga', 'position': 3}, 'link3': {'href': '/search/label/VIDEOS%20INFORMATIVOS?\x26max-results\x3d16', 'title': 'Videos Informativos', 'position': 4}, 'link4': {'href': '/search/label/GANAR%20DINERO?\x26max-results\x3d16', 'title': 'Ganar Dinero', 'position': 5}}]]></b:widget-setting>
+       <b:widget-setting name='homeTitle'>Inicio</b:widget-setting>
+     </b:widget-settings>
+     <b:includable id='main'>
         <!--enlaces-->
-                <div class='social2'>
+      <div class='social2'>
           			<b:loop values='data:links' var='link'>
 						<b:if cond='data:link.isCurrentPage'>
         					<a expr:class='&quot;here icon-&quot; + data:link.title' expr:href='data:link.href'><data:link.title/></a>
@@ -2239,9 +2230,10 @@ var nopage;var jenis;var nomerhal;var lblname1;halamanblogger();function loophal
 							<a expr:class='&quot;icon-&quot; + data:link.title' expr:href='data:link.href'><data:link.title/></a>
 						</b:if>
 					</b:loop>
-            	</div>
+    			</div>
+
 		</b:includable>
-          </b:widget>
+   </b:widget>
         </b:section>
 
 </div>
