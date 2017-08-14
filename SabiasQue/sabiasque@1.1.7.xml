@@ -146,7 +146,7 @@ body{/*start styles*/
   .card .data time{padding:1rem;}
 
   .card .data time::before{vertical-align:middle;padding-right:.35rem;}
-  .card a.image{margin-right:1.5rem;overflow:hidden;height:auto;width:20%;display:inline-block;}
+  .card a.image{margin-right:1.5rem;overflow:hidden;height:auto;width:25%;display:inline-block;}
 
   .card a.image img{
 width: 100%;}
@@ -420,13 +420,8 @@ body#layout .right{float: right;width: 50%;}
 <div class='fondo container'>
 
 <div class='300x250 clearfix' style='width:93%;padding:0;overflow:hidden;margin: 0 auto;'>
-<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-7415142946000607"
-     data-ad-slot="1982150146"></ins>
+<script async='' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='1982150146' style='display:block; text-align:center;'/>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -460,7 +455,7 @@ body#layout .right{float: right;width: 50%;}
     <b:includable id='main' var='top'>
 
    <b:if cond='data:view.isMultipleItems'>
-<div class='items' style='padding:1rem;'>
+<div class='items' style='padding:.05rem;'>
       <b:loop values='data:posts' var='post'>
          <b:include data='post' name='post'/><!-- insertamos entradas -->
       </b:loop>
@@ -471,13 +466,8 @@ body#layout .right{float: right;width: 50%;}
          <b:include data='post' name='post'/><!-- insertamos entradas -->
 
 <div class='300x250 clearfix' style='width:97%;padding:0;overflow:hidden;margin: 0 auto; margin-bottom:1rem;'>
-<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-7415142946000607"
-     data-ad-slot="1982150146"></ins>
+<script async='' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='1982150146' style='display:block; text-align:center;'/>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -558,7 +548,7 @@ body#layout .right{float: right;width: 50%;}
 			<div class='zona clearfix flex align-items-center wrap'>
                 <a class='image left clearfix' expr:href='data:post.url'>
                 <b:if cond='data:post.thumbnailUrl'>
-                                    <img expr:alt='data:post.title' expr:src='resizeImage(data:post.thumbnailUrl,260,)'/>
+                                    <img expr:alt='data:post.title' expr:src='resizeImage(data:post.thumbnailUrl,290,)'/>
                                 <b:else/>
                                     <b:if cond='data:post.firstImageUrl'>
                                         <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl' expr:title='data:post.title'/>
@@ -581,13 +571,8 @@ body#layout .right{float: right;width: 50%;}
 
 
 <div class='300x250 clearfix' style='width:97%;padding:0;overflow:hidden;margin: 0 auto;'>
-<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-7415142946000607"
-     data-ad-slot="1982150146"></ins>
+<script async='' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='1982150146' style='display:block; text-align:center;'/>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -640,13 +625,8 @@ body#layout .right{float: right;width: 50%;}
 <div style='clear:both; margin:10px 0'>
 
 <div class='300x250 clearfix' style='width:97%;padding:0;overflow:hidden;margin: 0 auto;'>
-<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-7415142946000607"
-     data-ad-slot="1982150146"></ins>
+<script async='' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='fluid' data-ad-layout='in-article' data-ad-slot='1982150146' style='display:block; text-align:center;'/>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
