@@ -443,7 +443,7 @@ body#layout #ads-post10 {display: block;}
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
-  <div class='widget-content' style="margin:0 auto;display:block;"><center>
+  <div class='widget-content' style='margin:0 auto;display:block;'><center>
     <data:content/></center>
   </div>
 </b:includable>
@@ -489,14 +489,13 @@ body#layout #ads-post10 {display: block;}
       <b:loop values='data:posts' var='post'>
          <b:include data='post' name='post'/><!-- insertamos entradas -->
 
-<div class='300x250 clearfix' style='margin: 0 auto; margin-bottom:1rem;'>
+<!--<div class='300x250 clearfix' style='margin: 0 auto; margin-bottom:1rem;'>
 <script async='' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- abajo sabia que -->
 <ins class='adsbygoogle' data-ad-client='ca-pub-7415142946000607' data-ad-format='auto' data-ad-slot='9653660560' style='display:block'/>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-  </div>
+  </div>-->
 
          <!-- insertamos comentarios --><div class='comentarios'>
         <h4>Comparte esta curiosidad!</h4>
@@ -720,7 +719,7 @@ if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);}
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
-  <div class='widget-content' style="width:97%;margin:0 auto;display:block;">
+  <div class='widget-content' style='width:97%;margin:0 auto;display:block;'>
     <data:content/>
   </div>
 </b:includable>
