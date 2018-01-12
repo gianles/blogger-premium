@@ -781,7 +781,7 @@ font-size:1.15rem;
 }
 .js_slide img {
     width: 500px;
-    height: auto;
+    height: 100%;
     border:0px solid #fff;
 }
 /*entrys*/
@@ -1872,14 +1872,6 @@ document.write(&quot;&lt;p&gt;&quot;+dayarray[day]+&quot;, &quot;+montharray[mon
 
 <b:section class='publicidad2 del inicio y index' id='publicidad header' showaddelement='no'>
   <b:widget id='HTML40' locked='true' title='' type='HTML' version='1'>
-    <b:widget-settings>
-      <b:widget-setting name='content'>&lt;script async=&#39;async&#39; src=&#39;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#39;&gt;&lt;/script&gt;
-&lt;!-- nuevoblog --&gt;
-&lt;ins class=&#39;adsbygoogle&#39; data-ad-client=&#39;ca-pub-8867960700770981&#39; data-ad-slot=&#39;3455664595&#39; style=&#39;display:inline-block;width:728px;height:90px&#39;&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-  &lt;/script&gt;</b:widget-setting>
-    </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content flex justify-content-center align-items-center clearfix' style='padding:1rem 0 2rem;'>
     <data:content/>
@@ -1991,14 +1983,6 @@ document.write(&quot;&lt;p&gt;&quot;+dayarray[day]+&quot;, &quot;+montharray[mon
 
 <b:section class='publicidad del inicio y index' cond='data:view.isMultipleItems' id='publicidad 2' showaddelement='no'>
   <b:widget id='HTML20' locked='true' title='' type='HTML' version='1'>
-    <b:widget-settings>
-      <b:widget-setting name='content'>&lt;script async=&#39;async&#39; src=&#39;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#39;&gt;&lt;/script&gt;
-&lt;!-- nuevoblog --&gt;
-&lt;ins class=&#39;adsbygoogle&#39; data-ad-client=&#39;ca-pub-8867960700770981&#39; data-ad-slot=&#39;3455664595&#39; style=&#39;display:inline-block;width:728px;height:90px&#39;&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-  &lt;/script&gt;</b:widget-setting>
-    </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content flex justify-content-center align-items-center clearfix' style='padding:1rem 0 2rem;'>
     <data:content/>
@@ -2012,22 +1996,7 @@ document.write(&quot;&lt;p&gt;&quot;+dayarray[day]+&quot;, &quot;+montharray[mon
   <b:section class='Redes2' id='Publicidad y Redes grande' showaddelement='no'>
     <b:widget id='HTML1' locked='false' title='redes' type='HTML' version='1'>
       <b:widget-settings>
-        <b:widget-setting name='content'>&lt;div class=&quot;flex justify-content-between&quot;&gt;&lt;script async src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
-&lt;!-- grande2 --&gt;
-&lt;ins class=&quot;adsbygoogle&quot;
-     style=&quot;display:inline-block;width:970px;height:250px&quot;
-     data-ad-client=&quot;ca-pub-8867960700770981&quot;
-     data-ad-slot=&quot;7291031463&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-
-&lt;div class=&quot;red-c flex wrap&quot;&gt;
-&lt;a href=&quot;/&quot; class=&quot;selva&quot; target=&#39;_blank&#39;&gt;&lt;p style=&quot;position:relative;top:30%;font-family:&#39;Lobster&#39;, cursive;;&quot;&gt;Pucallpa Teens&lt;/p&gt;&lt;/a&gt;
-&lt;a href=&quot;https://www.facebook.com/SoyPucallpino/&quot; class=&quot;fb&quot; target=&#39;_blank&#39;&gt;&lt;span style=&quot;position:relative;top:18%;display:block;&quot;&gt;&lt;i class=&quot;icon-facebook&quot;&gt;&lt;/i&gt;&lt;p class=&quot;cambio&quot;&gt;facebook&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;twitt&quot; target=&#39;_blank&#39;&gt;&lt;span style=&quot;position:relative;top:18%;display:block;&quot;&gt;&lt;i class=&quot;icon-twitter&quot;&gt;&lt;/i&gt;&lt;p class=&quot;cambio&quot;&gt;twitter&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;</b:widget-setting>
+        <b:widget-setting name='content'/>
       </b:widget-settings>
       <b:includable id='main'>
 <b:if cond='data:view.isPost'>
@@ -2173,45 +2142,6 @@ document.write(&quot;&lt;p&gt;&quot;+dayarray[day]+&quot;, &quot;+montharray[mon
     
       <b:if cond='data:view.isMultipleItems'>
 
-<b:if cond='data:postNum == 1'>
-                <div class='load'>
-				<div class='load_content'>
-					<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- nuevo adp -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-format='auto' data-ad-slot='9386648128' style='display:block'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-                </div>
-                </div>
-</b:if> 
-
-<b:if cond='data:postNum == 4'>
-                <div class='load'>
-				<div class='load_content'>
-					<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- nuevo adp -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-format='auto' data-ad-slot='9386648128' style='display:block'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-                </div>
-                </div>
-</b:if> 
-
-<b:if cond='data:postNum == 4'>
-                <div class='load'>
-				<div class='load_content'>
-					<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- nuevo adp -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-format='auto' data-ad-slot='9386648128' style='display:block'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-                </div>
-                </div>
-</b:if> 
-
       <div class='load'>
         <div class='load_content'>
           <a class='load_image' expr:href='data:post.url'>
@@ -2246,96 +2176,15 @@ document.write(&quot;&lt;p&gt;&quot;+dayarray[day]+&quot;, &quot;+montharray[mon
 
       <b:elseif cond='data:view.isPost'/>
 
-        <article class='post'>
-<center>
-<div class='publicooon2 clearfix'>
- <b:if cond='data:blog.isMobile'>
-    <!-- Elemento que se mostrará en la version móvil-->
-<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- slider -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-slot='3879697233' style='display:inline-block;width:300px;height:250px'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
- <b:else/>
-    <!-- Elemento que se mostrará en la versión Web -->
-<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-format='auto' data-ad-slot='9386648128' style='display:block;'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
- </b:if>
-          </div>
-
-  </center>
+        <article class='post'><br />
           <h1 class='title'><data:post.title/></h1>
 
           <div class='post-content'>
-            <div expr:id='&quot;aim1&quot; + data:post.id'/>
 
-<div style='clear:both; margin:1.1rem auto;'>
-<center>
-<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- lateral1 -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-slot='2181501593' style='display:inline-block;width:300px;height:600px'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  </center>
-</div>
-
-<div expr:id='&quot;aim2&quot; + data:post.id'>
 <data:post.body/>
-</div>
-
-<script type='text/javascript'>
-var obj0=document.getElementById(&quot;aim1<data:post.id/>&quot;);
-var obj1=document.getElementById(&quot;aim2<data:post.id/>&quot;);
-var s=obj1.innerHTML;
-var r=s.search(/\x3C!-- adsense --\x3E/igm);
-if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);}
-</script>
 
 
 <b:include name='shareButtons'/>
-
-<div class='contenedor-publicidad flex'>
-
- <b:if cond='data:blog.isMobile'>
-    <!-- Elemento que se mostrará en la version móvil-->
-<div class='publi'>
-<center>
-<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- slider -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-slot='3879697233' style='display:inline-block;width:300px;height:250px'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</center>
-</div>
-
- <b:else/>
-    <!-- Elemento que se mostrará en la versión Web -->
-
-<div class='publi'>
-					<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- nuevo adp -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-format='auto' data-ad-slot='9386648128' style='display:block'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
-<div class='publi'>
-
-					<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- nuevo adp -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-format='auto' data-ad-slot='9386648128' style='display:block'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
- </b:if>
-          </div>
 
             </div>
           </article>
@@ -2345,15 +2194,6 @@ if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);}
       <b:elseif cond='data:view.isPage'/>
 
         <article class='post'>
-
-<div class='publicooon2 flex justify-content-center align-items-center clearfix' style='padding:1rem;'>
-<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<!-- nuevoblog -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-slot='3455664595' style='display:inline-block;width:728px;height:90px'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-          </div>
           <h1 class='title'><data:post.title/></h1>
 
           <div class='post-content'>
@@ -2402,15 +2242,7 @@ if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);}
   </b:widget>
   <b:widget id='HTML2' locked='false' title='Publicidad debajo de recomendados' type='HTML' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='content'>&lt;center&gt;
-&lt;div class=&#39;publicooon2 clearfix&#39;&gt;
-&lt;script async=&#39;async&#39; src=&#39;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#39;&gt;&lt;/script&gt;
-&lt;ins class=&#39;adsbygoogle&#39; data-ad-client=&#39;ca-pub-8867960700770981&#39; data-ad-format=&#39;auto&#39; data-ad-slot=&#39;9386648128&#39; style=&#39;display:block;&#39;&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;/center&gt;</b:widget-setting>
+      <b:widget-setting name='content'/>
     </b:widget-settings>
     <b:includable id='main'>
 <b:if cond='data:view.isPost'>
@@ -2477,15 +2309,6 @@ if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);}
     </b:widget-settings>
     <b:includable id='main'>
 		<h2><span>recomendados</span></h2>
-
-
-<div class='publicooon' style='padding:0 2rem 0;height:auto;overflow:hidden;'>
-<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<ins class='adsbygoogle' data-ad-client='ca-pub-8867960700770981' data-ad-format='auto' data-ad-slot='9386648128' style='display:block;'/>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-      </div>
 	</b:includable>
   </b:widget>
 </b:section>
