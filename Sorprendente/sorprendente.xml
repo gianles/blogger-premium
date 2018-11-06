@@ -957,15 +957,10 @@ var relacionados={posts:[],max:6,maxLen:100,imgPorDefecto:"https://4.bp.blogspot
 /*Design: admin blog*/
 body#layout .left {float: left;width: 50%;}
 body#layout .right {float: right;width: 50%;}
+/*Fix: fb responsive hack ?= google plus hack */
+#comment-editor{border:0;width:100%;min-height:220px}
+.pluginSkinLight .u_0_0, .cmt_iframe_holder,.cmt_iframe_holder iframe,.fb-comments,.fb-comments iframe,.fb-comments span{width:100%!important;display:block!important}
 ]]></b:skin>
-
-<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: &quot;ca-pub-4555071359931443&quot;,
-    enable_page_level_ads: true
-  });
-</script>
 
 <style>
 iframe {
@@ -1137,16 +1132,7 @@ height:415px;
         <b:section id='Blog'>
           <b:widget cond='data:view.isMultipleItems' id='HTML1' locked='false' title='' type='HTML'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;script async src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
-&lt;!-- giancreativo_Blog_Blog1_1x1_as --&gt;
-&lt;ins class=&quot;adsbygoogle&quot;
-     style=&quot;display:block&quot;
-     data-ad-client=&quot;ca-pub-4555071359931443&quot;
-     data-ad-slot=&quot;3601254779&quot;
-     data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
+              <b:widget-setting name='content'>Publicidad aquí
 &lt;br /&gt;</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main'>
@@ -1231,7 +1217,7 @@ height:415px;
               </script>
            </b:includable>
             <b:includable id='comment-facebook'>
-              <div class='fb-comments' expr:data-href='data:blog.canonicalUrl' expr:data-numposts='data:commentsType[2]'/>
+              <div class='fb-comments' expr:data-href='data:blog.canonicalUrl' expr:data-numposts='10' width='1000px'/>
            </b:includable>
             <b:includable id='comment-form' var='post'><!--none--></b:includable>
             <b:includable id='commentDeleteIcon' var='comment'><!--none--></b:includable>
@@ -1260,10 +1246,7 @@ height:415px;
 <b:if cond='data:postNum == 6'>
                 		<div class='load'>
         				<div class='load_content'>
-						<ins class='adsbygoogle' data-ad-client='ca-pub-4555071359931443' data-ad-format='fluid' data-ad-layout-key='-8f+1i-e4+f3+jk' data-ad-slot='7328918230' style='display:block'/>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+						<!-- publicidad entradas 1 -->
 						</div>
 						</div>
 </b:if>
@@ -1271,10 +1254,7 @@ height:415px;
 <b:if cond='data:postNum == 6'>
                 		<div class='load'>
         				<div class='load_content'>
-						<ins class='adsbygoogle' data-ad-client='ca-pub-4555071359931443' data-ad-format='fluid' data-ad-layout-key='-8f+1i-e4+f3+jk' data-ad-slot='7328918230' style='display:block'/>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+						<!-- publicidad entradas 2 -->
 						</div>
 						</div>
 </b:if>
@@ -1282,10 +1262,7 @@ height:415px;
 <b:if cond='data:postNum == 6'>
                 		<div class='load'>
         				<div class='load_content'>
-						<ins class='adsbygoogle' data-ad-client='ca-pub-4555071359931443' data-ad-format='fluid' data-ad-layout-key='-8f+1i-e4+f3+jk' data-ad-slot='7328918230' style='display:block'/>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+						<!-- publicidad entradas 3 -->
 						</div>
 						</div>
 </b:if>
@@ -1370,7 +1347,7 @@ if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);}
 </div>
 
 <div id='fb-root'/>
-<div class='fb-comments' data-colorscheme='light' data-num-posts='5' data-width='100%' expr:href='data:post.canonicalUrl'/>
+<div class='fb-comments' data-numposts='10' data-width='100%' expr:data-href='data:blog.url.canonical'/>
  </div>
 </div>
 
