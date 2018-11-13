@@ -654,9 +654,6 @@ margin: 0 auto;
 width:70%;
 height:auto;
 }
-article .content img:first-child {
-display: none;
-}
 article .content{
 font-size:1.41rem;
 line-height:1.8rem;
